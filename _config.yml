@@ -1,10 +1,10 @@
 # Site settings
-title: Monochrome | A minimal, responsive Jekyll blog theme
-description: "A minimal, responsive, ready to use blog template, built with Jekyll."
+title: ARTLEE | 博客
+description: "记录一些容易遗忘的事物。"
 url: "http://www.artlee.cn/"
 author:
-  name: "The Review Index"
-  email: "dyutibarma@gmail.com"
+  name: "Lee"
+  email: "hey@artlee.cn"
   url: "http://www.artlee.cn/"
 
 # Build settings
