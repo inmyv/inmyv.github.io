@@ -1,33 +1,32 @@
 ---
 layout: page
-title: About Monochrome
-description: This page describes monochrome.
+title: 关于
+description: 这是关于页面的描述。
 ---
-## About
-Monochrome is a minimal, responsive theme created for Jekyll. The goal of Monochrome is to provide a ready to use, plug and play theme for those who want to set up a blog, and focus solely on the content.
+##关于
+单色是一个最小的，响应的主题为杰基尔。单色的目标是为那些想建立博客的人提供一个即用即用的即插即用主题，并且只关注内容。
 
-## Features
+##特点
 
-- Completely responsive and mobile first
-- Clean SEO friendly URLs, auto-generated from post title (no messy dates in the url)
-- SEO title/description integration
-- Sitemap ready
-- Easy customization for header, footer, navigation links, colors, favicon etc
-- Default Monochrome Color Palette - black, white, greys
+-完全响应，移动第一
+-干净的搜索引擎友好的网址，自动生成的帖子标题（没有凌乱的日期在网址）
+-SEO标题/描述集成
+-站点地图就绪
+-易于定制页眉，页脚，导航链接，颜色，favicon等
+-默认单色调色板-黑色、白色、灰色
 
-### Setup
+###设置
 
-Monochrome may be installed by simply downloading the .zip folder from the [repository on Github](https://github.com/thereviewindex/monochrome/archive/master.zip).
+只需从[repository on Github]下载.zip文件夹即可安装单色(https://github.com/thereviewindex/monology/archive/master.zip).
 
-After extracting the content from the folder into the selected directory, you can type ``jekyll serve`` from the terminal, than open your browser to ``0.0.0.0:4000/monochrome/`` and you will find it there.
+将文件夹中的内容提取到所选目录后，您可以从终端键入“jekyll serve”，然后打开浏览器到“0.0.0.0:4000/monocolone/”，您将在那里找到它。
 
-Additionally it is possible to fork the repository and use Github Pages as hosting. By following this way it will be enough to change the ``baseurl`` value into the ``_config.yml`` file, with the directory name of your project (for example /blog) or simply with a "/" (slash) if you want install Monochrome in the root. 
+此外，还可以分叉存储库并使用Github页面作为宿主。按照这种方法，将“baseurl”值更改为``_配置yml``文件，使用项目的目录名（例如/blog），或者如果希望在根目录下安装单色文件，则只需使用“/”（斜杠）。
 
 
 
-For further details on Monochrome, please visit the [repository on Github](https://github.com/thereviewindex/monochrome/).
+有关单色的详细信息，请访问[Github上的存储库](https://github.com/thereviewindex/monology/).
 
-![Monochrome](img/monochrome01.png "monochrome")
-
+![单色]（img/monolone01.png“单色”）
 
 
