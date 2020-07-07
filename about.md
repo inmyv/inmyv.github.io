@@ -1,0 +1,33 @@
+---
+layout: page
+title: 关于
+description: 关于页面的描述
+---
+##关于
+单色是一个最小的，响应的主题为杰基尔。单色的目标是为那些想建立博客的人提供一个即用即用的即插即用主题，并且只关注内容。
+
+##特点
+
+-完全响应，移动第一
+-干净的搜索引擎友好的网址，自动生成的帖子标题（没有凌乱的日期在网址）
+-SEO标题/描述集成
+-站点地图就绪
+-易于定制页眉，页脚，导航链接，颜色，favicon等
+-默认单色调色板-黑色、白色、灰色
+
+###设置
+
+只需从[repository on Github]下载.zip文件夹即可安装单色(https://github.com/thereviewindex/monology/archive/master.zip).
+
+将文件夹中的内容提取到所选目录后，您可以从终端键入“jekyll serve”，然后打开浏览器到“0.0.0.0:4000/monocolone/”，您将在那里找到它。
+
+此外，还可以分叉存储库并使用Github页面作为宿主。按照这种方法，将“baseurl”值更改为``_配置yml``文件，使用项目的目录名（例如/blog），或者如果希望在根目录下安装单色文件，则只需使用“/”（斜杠）。
+
+
+
+For further details on Monochrome, please visit the [repository on Github](https://github.com/thereviewindex/monochrome/).
+
+![Monochrome](img/monochrome01.png "monochrome")
+
+
+
