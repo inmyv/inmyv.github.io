@@ -1,6 +1,10 @@
-/* refer to https://github.com/spoqa/spoqa.github.com/blob/master/css/syntax.css */ 
+/*
+ * A Github stylesheet to highlight code snippet
+ * https://github.com/mojombo/tpw/blob/master/css/syntax.css
+ */
 
-.highlight  { background: $oc-gray-0; }
+// .highlight  { background-color: #FFF; }
+.lineno { color: darken($background-color, 25%); margin-right: 1em; }
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .highlight .k { font-weight: bold } /* Keyword */
