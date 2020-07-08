@@ -169,7 +169,7 @@
       margin-bottom: 1.3334em;
     }
 }
-
+/* 文章间隔线 
 .post+.post:before {
     display: block;
     content: '';
@@ -178,7 +178,7 @@
     margin: 23px auto;
     background-color: lighten($text-color, 70%);
   }
-
+*/
 .by-line {
   display: block;
   color: lighten($text-color, 25%);
