@@ -6,7 +6,7 @@ header: 常用的JavaScript位操作(Bitwise)文章标题
 ## 位操作
 
 JavaScript中的数字都按照IEEE-754(Institute of Electrical and Electronics Engineers)标准以64位格式存储。在位操作中，数字被转换为有符号32位格式。每次运算符会直接操作该32位数以得到结果。虽然需要转换，但这个过程与JavaScript其他数学运算和布尔操作相比要快很多。
-<!--more-->
+
 - Bitwise AND 按位与
 
 两个操作数的对应位都是1时，则在该位置返回1。
