@@ -41,19 +41,7 @@
             <span class="page-item">首页</span>
           {% endif %}
         
-          {% for page in (1..paginator.total_pages) %}
-
-            {% if page == paginator.page %}
-              <span class="page-item">{{ page }}</span>
-            {% elsif page == 1 %}
-              <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">{{ page }}</a>
-
-
-            {% else %}
-              <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="page-item">{{ page }}</a>
-            {% endif %}
-
-          {% endfor %}
+          {<a class="page-item">第{{paginator.page}}页 / 共{{paginator.total_pages}}页</a>
         
           {% if paginator.next_page %}
             <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">下一页</a>
