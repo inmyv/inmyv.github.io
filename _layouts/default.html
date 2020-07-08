@@ -14,14 +14,14 @@
 	  	<div id="menu"></div>
 	  </a>
 
-      <!-- Header -->
+      <!-- 页眉 -->
       {% if site.custom_header == true %}
         {% include header-custom.html %}
       {% else %}
         {% include header.html %}
       {% endif %}
 
-    <!-- Main content -->
+    <!-- 主体内容 -->
 	  <div id="container">
 		  
 		<main>
@@ -30,7 +30,7 @@
 
 	  </main>
 		
-		  <!-- Pagination links -->
+		  <!-- 文章分页 -->
       {% if paginator.total_pages > 1 %}
         <div class="pagination">
           {% if paginator.previous_page == 1 %}
@@ -54,10 +54,10 @@
 
 	  </div>
 	    
-	    <!-- Footer -->
+	    <!-- 页脚 -->
 	    {% include footer.html %}
 
-	    <!-- Script -->
+	    <!-- 脚本 -->
       {% include script.html %}
 
 	</div>

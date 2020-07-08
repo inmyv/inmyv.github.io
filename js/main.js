@@ -3,7 +3,7 @@ var reverse = document.getElementById("nav-menu-left");
 
 var icon = normal !== null ? normal : reverse;
 
-// Toggle the "menu-open" % "menu-opn-left" classes
+// 切换移动设备菜单导航
 function toggle() {
 	  var navRight = document.getElementById("nav");
 	  var navLeft = document.getElementById("nav-left");
@@ -27,7 +27,7 @@ function toggle() {
 	    }
 	}
 
-// Ensures backward compatibility with IE old versions
+// 确保与IE旧版本的向后兼容性
 function menuClick() {
 	if (document.addEventListener && icon !== null) {
 		icon.addEventListener('click', toggle);

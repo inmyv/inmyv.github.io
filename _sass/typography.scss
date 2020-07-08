@@ -54,7 +54,7 @@ blockquote {
 
 /*- 大屏幕排版，基于18px字体大小 -*/
 
-@media (min-width: 940px) { //Breakpoint set to 940px
+@media (min-width: 940px) { //设置断点 to 940px
 
 p, ul, ol {
 	font-size: 1em; /* 18px */

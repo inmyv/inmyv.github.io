@@ -1,4 +1,4 @@
-# Site settings
+# 网站设置
 title: 博客 | 记录一些东西...
 description: "网站详细描述内容"
 url: "https://www.artlee.cn"
@@ -7,8 +7,8 @@ author:
   email: "hey@artlee.cn"
   url: "https://www.artlee.cn"
 
-# Build settings
-baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
+# 部署设置
+baseurl: / # 将其更改为相对路径（例如：/blog/），或者只保留一个 “/”
 markdown: kramdown
 source: .
 destination: ./_site
@@ -17,7 +17,7 @@ paginate: 5
 paginate_path: /page:num/
 
 
-# Default values
+# 默认值
 defaults:
   -
     scope:
@@ -26,15 +26,15 @@ defaults:
     values:
       layout: "post"
 
-# Plugins
+# 插件
 gems:
   - jekyll-paginate
   - jekyll-sitemap
 
-# Custom variables
+# 自定义变量
 version: "1.0.0"
 
-# Options
+# 选项
 custom_header: false
 custom_nav_footer: false
 reverse: false
