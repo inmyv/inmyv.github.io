@@ -41,7 +41,7 @@
             <span class="page-item">首页</span>
           {% endif %}
         
-          {<a class="page-item">第{{paginator.page}}页 / 共{{paginator.total_pages}}页</a>
+          <span class="page-item">第{{paginator.page}}页｜共{{paginator.total_pages}}页</span>
         
           {% if paginator.next_page %}
             <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">下一页</a>
