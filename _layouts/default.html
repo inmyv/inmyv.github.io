@@ -33,8 +33,7 @@
 		  <!-- Pagination links -->
       {% if paginator.total_pages > 1 %}
         <div class="pagination">
-          {% if paginator.previous_page == 1 %}
-            <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">前一页</a>
+            
           {% elsif paginator.previous_page%}
             <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">前翻</a>
           {% else %}
