@@ -22,10 +22,10 @@ body {
 
 /*- Base color -*/
 
-$background-color: #fcfcfc;
+$background-color: #f0f0f0;
 $text-color: #990033;
 $text-light-color: rgba(0,0,0,0.6);
-$text-dark-color: #333366;
+$text-dark-color: #ffae00;
 
 /*- Base settings -*/
 
@@ -52,7 +52,7 @@ a {
 	font-weight: 700;
 	&:hover,
 	&:focus {
-		color: darken($text-dark-color, 5%);
+		color: darken($text-color, 5%);
 	}
 }
 
