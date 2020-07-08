@@ -1,33 +1,131 @@
 ---
-layout: page
-title: 关于
-description: 关于页面的描述。
+title: About
+permalink: /about/
 ---
-##关于
-单色是一个最小的，响应的主题为杰基尔。单色的目标是为那些想建立博客的人提供一个即用即用的即插即用主题，并且只关注内容。
 
-##特点
+You can see live demo [here](https://aweekj.github.io/Kiko-plus). This theme is inspired by [Kiko](http://github.com/gfjaru/Kiko) theme.
 
--完全响应，移动第一
--干净的搜索引擎友好的网址，自动生成的帖子标题（没有凌乱的日期在网址）
--SEO标题/描述集成
--站点地图就绪
--易于定制页眉，页脚，导航链接，颜色，favicon等
--默认单色调色板-黑色、白色、灰色
+## Features
 
-###设置
-
-只需从[repository on Github]下载.zip文件夹即可安装单色(https://github.com/thereviewindex/monology/archive/master.zip).
-
-将文件夹中的内容提取到所选目录后，您可以从终端键入“jekyll serve”，然后打开浏览器到“0.0.0.0:4000/monocolone/”，您将在那里找到它。
-
-此外，还可以分叉存储库并使用Github页面作为宿主。按照这种方法，将“baseurl”值更改为``_配置yml``文件，使用项目的目录名（例如/blog），或者如果希望在根目录下安装单色文件，则只需使用“/”（斜杠）。
+- Disqus comment system
+- Google analytics
+- Pagination support
+- Custom tags
+- SEO support
 
 
+## Installation
 
-有关单色的详细信息，请访问[Github上的存储库](https://github.com/thereviewindex/monology/).
+#### Method 1: new master's repository (The Best)
 
-![单色]（img/monolone01.png“单色”）
+1. First [fork](https://github.com/AWEEKJ/Kiko-plus/fork) it.
+2. Change your forked repository name _Kiko-plus_ to __USERNAME.github.io__ where __USERNAME__ is your github username.
+3. Access your new blog via [https://username.github.io](https://username.github.io).
+4. [See configuration](#configuration).
+
+#### Method 2: gh-pages in existing repository
+
+1. Create a new branch called _gh-pages_ in the repository where you want to add a template [managing branches](https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/).
+2. From command line run `git clone https://github.com/AWEEKJ/Kiko-plus.git` - this will clone _Kiko-plus_ template to your computer.
+3. Create new branch `git checkout -b gh-pages` where _gh-pages_ will be your branch name.
+4. Add remote, which is your repo from the first step, to your new branch `git remote add gh-pages https://github.com/<yourName>/<yourMaster>/gh-pages`. _yourName_ is your account name and _yourMaster_ is your repository.
+5. Push new branch to remote `git push gh-pages`.
+6. Update `_config.yml` file by changing `baseurl: "<branchName>"` _branchName_ is your branch name where _gh-pages_ resides. See [configuration](#configuration).
+
+#### Method 3: Run it locally
+
+1. Download [zip](https://github.com/AWEEKJ/Kiko-plus/archive/master.zip) or clone it `git clone https://github.com/AWEEKJ/Kiko-plus`.
+2. Go inside folder and run `jekyll serve` or `rake preview`. This will build a website which you can access [https://localhost:4000](https://localhost:4000). You need to have [Jekyll](https://jekyllrb.com/docs/installation/) installed to do this.
 
 
+## Configuration
 
+All configuration is done via `_config.yml` file which you will find in your main repo folder. Change this `<something>` to yours.
+
+### Basic
+
+- Config your blog name.
+
+```yml
+name: <blog-name>
+```
+
+- These configuration in `author:` is for links to icons in footer. If you want to add more link icons, modify `_includes/footer.html` file.
+
+```yml
+author:
+  facebook:         your-id
+  twitter:          your-id
+  github:           your-id
+  linkedin:         your-id
+  medium:           your-id
+  tumblr:           your-id
+  email:            your-id@your-email.com
+```
+
+- Change copyright year and name in footer.
+
+```yml
+copyright:
+  year:             2017
+  name:             Kiko
+```
+
+### Google analytics
+
+- Change this to your Google Analytic ID.
+
+```yml
+google-analytics:
+  id:               "your-id"
+```
+
+### Disqus
+
+- Change this to your Disqus short name.
+
+```yml
+disqus:
+  id:               "your-id"
+```
+
+### URL
+
+- Config your domain.
+
+```yml
+url: "https://<your-name>.github.io"
+```
+
+- **NOTE** When if running locally, change url to 
+
+```yml
+url: "https://localhost:4000"
+```
+
+- Change this to your branch name where _gh-pages_ resides. 
+- **NOTE** apply only if you used __Method 2__ for installation.
+
+```yml
+baseurl: "/<branch-name>"
+```
+
+## Rakefile Usage
+
+```bash
+# Create new post
+$ rake post title="A Title" [date="2015-08-16"] [tags="[tag1, tag2]"] 
+
+# Create new draft post
+$ rake draft title="A Title" [date="2015-08-16"] [tags="[tag1, tag2]"]
+
+# Install Jekyll Plugins. Do before running in local.
+$ rake geminstall
+
+# Run in Local
+$ rake preview
+```
+
+## License
+
+This theme is released under MIT License.
