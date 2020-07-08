@@ -34,21 +34,21 @@ h2 {
 
 h3, h4, h5, h6 {
 	font-size: 1.125em; /* 18px/16px */
-	line-height: 1.8em;
-	padding: 0.66667em 0; /* 12px/18px * 2 (Use padding instead of margin to maintain proximity with paragraph) */
+	line-height: 0.1em;
+	padding: 0.1em 0; /* 12px/18px * 2 (Use padding instead of margin to maintain proximity with paragraph) */
 }
 
 blockquote {
 	font-style: italic;
-	margin: 1.5em; /* 24px/18px */
+	margin: 0.5em; /* 24px/18px */
 	-webkit-border-radius: 4px;
 	   -moz-border-radius: 4px;
 	    -ms-border-radius: 4px;
           border-radius: 4px;
 	background-color: darken($background-color, 5%);
-	padding: 0 1.5em; /* 24px/18px */
+	padding: 0 0.2em; /* 24px/18px */
 	p, ul, ol {
-		padding: 1.5em 0; /* 24px/18px */
+		padding: 0.2em 0; /* 24px/18px */
 	}
 }
 
@@ -75,9 +75,9 @@ h2 {
 }
 
 h3, h4, h5, h6 {
-	font-size: 1.3334em; /* 24px/18px */
-	line-height: 1.8em;
-	padding: 0.5em 0; /* 12px/24px * 2 (Use padding instead of margin to maintain proximity with paragraph) */
+	font-size: 0.8em; /* 24px/18px */
+	line-height: 0.2em;
+	padding: 0.1em 0; /* 12px/24px * 2 (Use padding instead of margin to maintain proximity with paragraph) */
 }
 
 blockquote {
@@ -88,9 +88,9 @@ blockquote {
 	    -ms-border-radius: 4px;
           border-radius: 4px;
 	background-color: darken($background-color, 5%);
-	padding: 0 1.33334em; /* 24px/18px */
+	padding: 0 0.1em; /* 24px/18px */
 	p, ul, ol {
-		padding: 1.33334em 0; /* 24px/18px */
+		padding: 0.1em 0; /* 24px/18px */
 	}
 }
 
