@@ -240,7 +240,7 @@ code {
     color: $text-color;
   }
   a:hover {
-    background-color: darken($text-color, 5%);
+    background-color: lighten($text-color, 5%);
   }
 }
 .page-item {
