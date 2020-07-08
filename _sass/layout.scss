@@ -255,6 +255,19 @@ code {
           border-radius: 4px;
 }
 
+.page-tags {
+  background-color: lighten($text-color, 10%);
+  color: $background-color;
+  padding: 2px 4px;
+  font-weight: 200;
+  padding: 0.5em 1em;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+          border-radius: 2px;
+}
+
+
 /* Footer */
 
 footer {

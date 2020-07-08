@@ -11,7 +11,7 @@ layout: default
       <time datetime="{{ post.date | date_to_xmlschema }}" class="by-line"> {{ post.date | date_to_string }}
 		  
 		{% for tag in post.tags %}
-            <li><i class="fa fa-tag"> {{ tag }}</i></li>
+            <i class="page-tags"> {{ tag }}</i>
             {% endfor %}
 
 	  </time>
