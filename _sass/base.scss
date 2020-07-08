@@ -1,8 +1,8 @@
 /*
- * Monochrome is a simple, responsive blog theme built for Jekyll.
+ * 简单，响应迅速的博客jekyll主题
  */
 
-/*- Base reset -*/
+/*- 基础重置-*/
 
 * {
   -webkit-box-sizing: border-box;
@@ -20,14 +20,14 @@ body {
 
 }
 
-/*- Base color -*/
+/*- 基础配色 -*/
 
 $background-color: #FFFFFF;
 $text-color: #333333;
 $text-light-color: rgba(0,0,0,0.6);
 $text-dark-color: #000000;
 
-/*- Base settings -*/
+/*- 基础设置 -*/
 
 html {
 	background-color: $background-color;
@@ -45,7 +45,7 @@ body {
  padding: 0 10px;
 }
 
-/*- Link -*/
+/*- 连接 -*/
 a {
 	color: $text-color;
 	text-decoration: none;
@@ -56,13 +56,13 @@ a {
 	}
 }
 
-/* Common classes */
+/* 常见类别 */
 
 .f-right { float: right; }
 .f-left { float: left; }
 .clear { clear:both; }
 
-// to align div vertically and horizontally in center of another div
+// 在另一个div的中心垂直和水平对齐div
 .parent { display: flex;}
 .inner { align-self: center; }
 
@@ -74,7 +74,7 @@ a {
 .h100 { height: 100% }
 .wh100 { width: 100%; height: 100%}
 
-// position
+// 位置
 .absolute { position: absolute; }
 .relative { position: relative; }
 .top { top: 0 }

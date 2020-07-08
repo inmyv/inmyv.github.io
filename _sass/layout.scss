@@ -1,6 +1,6 @@
-/* -- General Layout -- */
+/* -- 总体布局 -- */
 
-/* Navigation */
+/* 导航 */
 
 #nav, #nav-left { 
   a {
@@ -29,7 +29,7 @@
   @include nav-position(left);
 }
 
-/* Toggle class to open menu */
+/* 移动设备显示的菜单 */
 
 #nav.menu-open {
   @include open(-14rem);
@@ -50,7 +50,7 @@
   }
 }
 
-/* Separator after menu */
+/* 菜单后分隔符*/
 
 #nav-list:after {
   display: block;
@@ -61,7 +61,7 @@
   background-color: $text-color;
 }
 
-/* Icon menu */
+/* 图标菜单 */
 
 #nav-menu {
   @include icon-position(right);
@@ -118,7 +118,7 @@
   }
 }
 
-/* Main content */
+/* 主体内容 */
 
 .fixed {
   position: fixed;
@@ -155,7 +155,7 @@
   }
 }
 
-/* Posts */
+/* 文章列表 */
 
 #posts {
   li {
@@ -214,7 +214,7 @@ code {
   background-color: lighten($background-color, 35%);
 }
 
-/* Set the vertical rhythm (and padding-left) for lists inside post content */
+/* 设置文章内容内列表的垂直节奏（和左填充） */
 
 .content ul, .content ol {
   line-height: 1.8em;
@@ -224,13 +224,13 @@ code {
   }
 }
 
-/* Pages */
+/* 文章列表*/
 
 #page ul, #page ol {
   padding-left: 1.5em;
 }
 
-/* Paginator */
+/* 分页 */
 
 .pagination {
   text-align: center;
@@ -255,7 +255,7 @@ code {
           border-radius: 4px;
 }
 
-/* Footer */
+/* 页脚 */
 
 footer {
   background-color: $background-color;
