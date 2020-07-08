@@ -259,12 +259,12 @@ code {
   background-color: lighten($text-color, 10%);
   color: $background-color;
   padding: 1px 1px;
-  font-weight: 200;
-  padding: 0.5em 0.5em;
-  -webkit-border-radius: 2px;
-     -moz-border-radius: 2px;
-      -ms-border-radius: 2px;
-          border-radius: 2px;
+  font-weight: 100;
+  padding: 0.2em 0.2em;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+      -ms-border-radius: 8px;
+          border-radius: 8px;
 }
 
 
