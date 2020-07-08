@@ -170,14 +170,7 @@
     }
 }
 
-.post+.post:before {
-    display: block;
-    content: '';
-    width: 5rem;
-    height: 1px;
-    margin: 23px left;
-    background-color: lighten($text-color, 70%);
-  }
+
 
 .by-line {
   display: block;
