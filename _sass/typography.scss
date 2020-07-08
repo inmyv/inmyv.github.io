@@ -16,31 +16,31 @@ body
 
 p, ul, ol {
 	font-size: 1em; /* 16px */
-	line-height: 1.8em;
+	line-height: 0.8em;
 	margin-bottom: 0.5em; /* 24px/16px */
 }
 
 h1 {
-	font-size: 2.25em; /* 36px/16px */
-	line-height: 1.8em;
+	font-size: 1.25em; /* 36px/16px */
+	line-height: 0.8em;
 	padding: 0.33335em 0; /* 12px/36px * 2 (Use padding instead of margin to maintain proximity with paragraph) */
 }
 
 h2 {
 	font-size: 1.5em; /* 24px/16px */
-	line-height: 1.8em;
+	line-height: 0.8em;
 	padding: 0.5em 0 0 0; /* 12px/24px * 2, only top (Use padding instead of margin to maintain proximity with paragwithph) */
 }
 
 h3, h4, h5, h6 {
 	font-size: 1.125em; /* 18px/16px */
-	line-height: 1.8em;
+	line-height: 0.8em;
 	padding: 0.66667em 0; /* 12px/18px * 2 (Use padding instead of margin to maintain proximity with paragraph) */
 }
 
 blockquote {
 	font-style: italic;
-	margin: 1.5em; /* 24px/18px */
+	margin: 0.5em; /* 24px/18px */
 	-webkit-border-radius: 4px;
 	   -moz-border-radius: 4px;
 	    -ms-border-radius: 4px;
@@ -58,31 +58,31 @@ blockquote {
 
 p, ul, ol {
 	font-size: 1em; /* 18px */
-	line-height: 1.8em;
-	margin-bottom: 1.3334em; /* 24px/18px */
+	line-height: 0.8em;
+	margin-bottom: 0.4em; /* 24px/18px */
 }
 
 h1 {
 	font-size: 2.6667em; /* 48px/18px */
-	line-height: 1.8em;
+	line-height: 0.8em;
 	padding: 0.25em 0; /* 12px/48px * 2 (Use padding instead of margin to maintain proximity with paragraph) */
 }
 
 h2 {
-	font-size: 2em; /* 36px/18px */
-	line-height: 1.8em;
+	font-size: 1.5em; /* 36px/18px */
+	line-height: 0.8em;
 	padding: 0.66667em 0 0 0; /* 12px/36px * 2, pnly top (Use padding instead of margin to maintain proximity with paragraph) */
 }
 
 h3, h4, h5, h6 {
 	font-size: 1.3334em; /* 24px/18px */
-	line-height: 1.8em;
+	line-height: 0.8em;
 	padding: 0.5em 0; /* 12px/24px * 2 (Use padding instead of margin to maintain proximity with paragraph) */
 }
 
 blockquote {
 	font-style: italic;
-	margin: 1.3334em; /* 24px/18px */
+	margin: 0.3334em; /* 24px/18px */
 	-webkit-border-radius: 4px;
 	   -moz-border-radius: 4px;
 	    -ms-border-radius: 4px;
@@ -90,7 +90,7 @@ blockquote {
 	background-color: darken($background-color, 5%);
 	padding: 0 1.33334em; /* 24px/18px */
 	p, ul, ol {
-		padding: 1.33334em 0; /* 24px/18px */
+		padding: 0.33334em 0; /* 24px/18px */
 	}
 }
 
