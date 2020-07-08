@@ -9,10 +9,13 @@ layout: default
 	  <li class="post">
 	  	<h3><a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{%if post.header %}{{ post.header }}{% else %}{{ post.title }}{% endif %}</a></h3>
       <time datetime="{{ post.date | date_to_xmlschema }}" class="by-line"> 
-		  {{ post.date | date_to_string }}
+		  
 		  {% for tag in site.tags %}
 		  「{{ tag[0] }}」
 		  {% endfor%}
+
+		  {{ post.date | date_to_string }}
+		  
 	  </time>	
 	  	<p>{{ post.content | strip_html | truncate:200 }}</p>
 	  </li>
