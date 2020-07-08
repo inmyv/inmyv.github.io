@@ -31,37 +31,35 @@
 	  </main>
 		
 		  <!-- Pagination links -->
+      {% if paginator.total_pages > 1 %}
         <div class="pagination">
-          {% if paginator.page > 2 %}
-<a class="page-item" href="/page{{paginator.previous_page}}/">上一页</a>
-{% endif %}
+          {% if paginator.previous_page == 1 %}
+            <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">前一页</a>
+          {% elsif paginator.previous_page%}
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">前一页</a>
+          {% else %}
+            <span class="page-item">首页</span>
+          {% endif %}
+        
+          {% for page in (1..paginator.total_pages) %}
 
-{% assign pageSize = 5 %}
-{% assign startPage = paginator.page | minus:pageSize %}
-{% if 2 > startPage %} 
-{% assign startPage = 2 %}
-{% endif %}
+            {% if page == paginator.page %}
+              <span class="page-item">{{ page }}</span>
+            {% elsif page == 1 %}
+              <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">{{ page }}</a>
 
-{% assign endPage = paginator.page | plus:pageSize %}
-{% if endPage >= paginator.total_pages %} 
-{% assign endPage = paginator.total_pages | minus:1 %}
-{% endif %}
 
-{% for count in (startPage..endPage) %}
-{% if count == paginator.page %}
-<a class="page-item" href="#">{{count}}</a>
+            {% else %}
+              <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="page-item">{{ page }}</a>
+            {% endif %}
 
-{% else %}
-<a class="page-item" href="/page{{count}}/">{{count}}</a>
-{% endif %}
-
-{% endfor %}
-
-{% if paginator.next_page %}
-<a class="page-item" href="/page{{paginator.next_page}}/">下一页</a>
-{% endif %}
-<a class="page-item" href="/page{{paginator.total_pages}}/">末页</a>
-<a class="page-item" href="#">第{{paginator.page}}页 / 共{{paginator.total_pages}}页</a>
+          {% endfor %}
+        
+          {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">下一页</a>
+          {% else %}
+            <span class="page-item">最后一页</span>
+          {% endif %}
         </div>
       {% endif %}
 
