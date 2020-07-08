@@ -179,21 +179,10 @@
     background-color: lighten($text-color, 70%);
   }
 
-.by-line {
-  display: block;
-  color: lighten($text-color, 25%);
-  line-height: 1.8em; 
-  margin-bottom: 1.5em; /* 24px/16px */
-  font-weight: 200;
-  @media (min-width: 940px) {
-    display: block;
-    color: lighten($text-color, 25%);
-    line-height: 1.8em;
-    margin-bottom: 1.3334em; /* 24px/18px */
-    font-weight: 200;
-  }
-}
 
+
+
+/*------文章列表标签效果------开始-----*/
 .page-tags {
   background-color: lighten($text-color, 10%);
   color: $background-color;
@@ -206,6 +195,8 @@
       -ms-border-radius: 6px;
           border-radius: 6px;
 }
+/*------文章列表标签效果------结束-----*/
+
 
 img {
   max-width: 100%;
