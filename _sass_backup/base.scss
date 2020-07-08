@@ -22,17 +22,17 @@ body {
 
 /*- Base color -*/
 
-$background-color: #FFFFFF;
-$text-color: #333333;
+$background-color: #fdfdfd;
+$text-color: #aa0000;
 $text-light-color: rgba(0,0,0,0.6);
-$text-dark-color: #000000;
+$text-dark-color: #ff0000;
 
 /*- Base settings -*/
 
 html {
 	background-color: $background-color;
 	font-size: 16px;
-	@media (min-width: 940px) {
+	@media (min-width: 840px) {
 		font-size: 18px;
 	}
 	line-height: 1.8;
@@ -40,7 +40,7 @@ html {
 }
 
 body {
- max-width: 1000px;
+ max-width: 900px;
  margin: 0 auto;
  padding: 0 10px;
 }
@@ -52,7 +52,7 @@ a {
 	font-weight: 700;
 	&:hover,
 	&:focus {
-		color: darken($text-color, 5%);
+		color: darken($text-dark-color, 5%);
 	}
 }
 
