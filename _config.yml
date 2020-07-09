@@ -1,40 +1,58 @@
-# 网站设置
-title: 博客 | 记录一些东西...
-description: "网站详细描述内容"
-url: "https://www.artlee.cn"
-author:
-  name: "Lee"
-  email: "hey@artlee.cn"
-  url: "https://www.artlee.cn"
-
-# 部署设置
-baseurl:  # 将其更改为相对路径（例如：/blog/），或者只保留一个 “/”
-markdown: kramdown
-source: .
-destination: ./_site
-permalink: /:title
-paginate: 5
-paginate_path: /page:num/
+title:            Slate+Simple Jekyll Theme
+description:      Your site description...
+copyright:        Your Name
+url: # add your custom site url (format: https://example.com)
 
 
-# 默认值
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-
-# 插件
+future:      false  # publish future dated posts --  true, false (default)
+highlighter: rouge
+markdown:    kramdown
 gems:
-  - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-feed
 
-# 自定义变量
-version: "1.0.0"
+sass:
+  sass_dir: _sass
+  style: compressed
 
-# 选项
-custom_header: false
-custom_nav_footer: false
-reverse: false
+permalink: /:categories/:year-:month-:day/:title.html
+
+# Amount of post to show on home page
+paginate: 5
+
+#kramdown:
+#  input: GFM
+#  auto_ids: true
+#  footnote_nr: 1
+#  entity_output: as_char
+#  toc_levels: 1..6
+#  enable_coderay: false
+
+include:
+  - .htaccess
+
+exclude:
+  - "*.less"
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - CHANGELOG
+  - Capfile
+  - Gemfile
+  - Gruntfile.js
+  - LICENSE
+  - README
+  - Rakefile
+  - config
+  - gulpfile.js
+  - lib
+  - log
+  - node_modules
+  - package.json
+  - spec
+  - tmp
