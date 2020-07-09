@@ -39,7 +39,7 @@ plugins:
 >>>>>>> f4dad9f99119a1035db98a15e2d3531a05e172e4
 
 include:
-  - .htaccess
+  - .htaccess 
 
 exclude:
   - "*.less"
