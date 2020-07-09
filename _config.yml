@@ -1,13 +1,13 @@
-title:            Slate+Simple Jekyll Theme
-description:      Your site description...
-copyright:        Your Name
-url: # add your custom site url (format: https://example.com)
+title:            魅影绝代
+description:      网站的描述内容。
+copyright:        Lee
+url: # 添加自定义网站url (格式: https://example.com)
 
 
-future:      false  # publish future dated posts --  true, false (default)
+future:      false  # 发布过时的帖子 --  true, false (默认)
 highlighter: rouge
 markdown:    kramdown
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-gist
@@ -17,27 +17,21 @@ sass:
   sass_dir: _sass
   style: compressed
 
-permalink: /:categories/:year-:month-:day/:title.html
+permalink: /:title
 
-# Amount of post to show on home page
+# 显示在首页上的帖子数量
 paginate: 5
 
-#kramdown:
-#  input: GFM
-#  auto_ids: true
-#  footnote_nr: 1
-#  entity_output: as_char
-#  toc_levels: 1..6
-#  enable_coderay: false
-
-# 插件
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-admin
+kramdown:
+  input: GFM
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..3
+  enable_coderay: false
 
 include:
-  - .htaccess 
+  - .htaccess
 
 exclude:
   - "*.less"

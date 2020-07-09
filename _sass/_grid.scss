@@ -1,8 +1,8 @@
-/*--- GRID ------------------------------------------------------------------*/
-// Adapted from mmistakes -> https://github.com/mmistakes/hpstr-jekyll-theme
+/*--- GRID ------------------------------------------------------------------ */
+//改编自mmistakes-> https://github.com/mmistakes/hpstr-jekyll-theme
 
-// Defining number of columns in the grid.
-// Common Values would be 12, 16 or 24
+//定义网格中的列数。
+//通用值为12、16或24
 $width: 100%;
 $def_grid: 12;
 $margin: 0;
@@ -12,32 +12,32 @@ $margin: 0;
   width:$width;
 }
                                       
-// Works out the width of elements based
-// on total number of columns and width
-// number of columns being displayed.
-// Removes 20px for margins
+//计算出基于元素的宽度
+//列总数和宽度
+//正在显示的列数。
+//删除20px的边距
 @mixin grid($grid:$def_grid,$cols:'',$float:left,$display:inline){
   display:$display;
   float:$float;
   width:(100%/$grid * $cols) - ($margin * 2);
 }  
 
-// Allows for padding before element
+// 允许在元素之前填充
 @mixin prefix($grid:$def_grid,$cols:''){
   margin-left:(100%/$grid * $cols);
 }
 
-// Allows for padding after element
+// 允许在元素之后填充
 @mixin suffix($grid:$def_grid,$cols:''){  
   margin-right:(100%/$grid * $cols);    
 }
 
-// Removes left margin
+// 去除左边距
 @mixin first(){
   margin-left:0;
 }
 
-// Removes right margin
+// 删除右边距
 @mixin last(){
   margin-right:0;
 }

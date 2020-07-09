@@ -1,10 +1,10 @@
-/*--- PAGE ------------------------------------------------------------------*/
+/*--- 页面 ------------------------------------------------------------------*/
 
-$feature-image-height            : 400px; // min 150px recommended
-$front-page-feature-image-height : 300px; // min 150px recommended
+$feature-image-height            : 400px; // 最低150px推荐
+$front-page-feature-image-height : 300px; // 最低150px推荐
 $column-width                    : 950px;
 
-/*--- TYPOGRAPHY ------------------------------------------------------------*/
+/*--- 版式 ------------------------------------------------------------*/
 
 $base-font                       : 'Lato', Calibri, Arial, sans-serif;
 $heading-font                    : $base-font;
@@ -15,15 +15,15 @@ $alt-font                        : serif;
 $doc-font-size                   : 16;
 $doc-line-height                 : 26;
 
-/*--- COLORS ----------------------------------------------------------------*/
+/*--- 颜色 ----------------------------------------------------------------*/
 
 $base-color                      : rgba(#222,0.8);
-$body-color                      : #202020;
-$text-color                      : #808080;
-$border-color                    : lighten($base-color,60);
+$body-color                      : #252525; /* 网站背景颜色 */
+$text-color                      : #5a5a5a;
+$border-color                    : lighten($base-color,40);
 $link-color                      : #202020;
 
-/*--- SCREEN SIZES ----------------------------------------------------------*/
+/*--- 屏幕尺寸 ----------------------------------------------------------*/
 
 $small                           : "only screen and (min-width: 30em)";
 $medium                          : "only screen and (min-width: 48em)";

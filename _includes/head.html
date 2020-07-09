@@ -3,10 +3,10 @@
 <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 {% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
 
-<!-- MathJax -->
+<!-- MathJax数学公式 -->
 <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
-{% if site.owner.twitter %}<!-- Twitter Cards -->
+{% if site.owner.twitter %}<!-- 推特名片 -->
 {% if page.image.feature %}<meta name="twitter:card" content="summary_large_image">
 
 
@@ -21,7 +21,7 @@
 
 
 
-<!-- Open Graph -->
+<!-- 公开图形 -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
 <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
@@ -41,9 +41,9 @@
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- For all browsers -->
+<!-- 对于所有浏览器 -->
 <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
-<!-- Webfonts -->
+<!-- Web字体 -->
 <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
 
 <meta http-equiv="cleartype" content="on">

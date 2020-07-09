@@ -2,7 +2,7 @@
 layout: post
 title: Blogroll
 ---
-A lot of the inspiration for this blog comes from the following:
+该博客的许多灵感来自以下方面：
 
 Cincinnati:
 <ol>

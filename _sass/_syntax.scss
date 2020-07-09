@@ -1,4 +1,4 @@
-/*--- SYNTAX HIGHLIGHTING ---------------------------------------------------*/
+/*--- 语法高亮 ---------------------------------------------------*/
 
 div.highlighter-rouge, figure.highlight {
     position: relative;
@@ -30,7 +30,7 @@ figure.highlight {
         padding: 5px;
         border: 0;
 
-        // line numbers
+        // 行号
         &.gutter {
         padding-right: 1em;
         color: #ccc;
@@ -54,7 +54,7 @@ figure.highlight {
     
 	.hll { background-color: #49483e }
     
-    /* Error */
+    /* 错误*/
 	.err {                     
         color: #960050; 
         background-color: #1e0010 

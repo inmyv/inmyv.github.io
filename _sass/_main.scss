@@ -1,4 +1,4 @@
-/*--- LINKS -----------------------------------------------------------------*/
+/*--- 链接 -----------------------------------------------------------------*/
 
 a {  
 	text-decoration: none;
@@ -23,7 +23,7 @@ a {
 	}
 }
 
-/*--- BLOCKQUOTE ------------------------------------------------------------*/
+/*--- 引用 -----------------------------------------------------------------*/
 
 blockquote {
     border-left: 4px solid $border-color;
@@ -35,7 +35,7 @@ blockquote {
     line-height: 22px;
 }
 
-/*--- CODE FORMAT -----------------------------------------------------------*/
+/*--- 代码格式 --------------------------------------------------------------*/
 
 tt, code, kbd, samp, pre {
 	font-family: $code-font;
@@ -72,7 +72,7 @@ pre {
 	}
 }
 
-/*--- ABOUT SECTION (SOCIAL MEDIA) ------------------------------------------*/
+/*--- 关于页面的社交媒体 -------------------------------------------------------*/
 
 .personal-social-media {
     word-spacing: 10px;
@@ -82,7 +82,7 @@ pre {
     }
 }
 
-/*--- DIVIDING LINE ---------------------------------------------------------*/
+/*--- 分界线 -----------------------------------------------------------------*/
 
 hr { 
     display: block; 
@@ -94,7 +94,7 @@ hr {
     border-bottom: 1px solid #fff; 
 }
 
-/*--- FIGURES & IMAGES ------------------------------------------------------*/
+/*--- 图形和图像 --------------------------------------------------------------*/
 
 figure {
   margin: 0;
@@ -110,7 +110,7 @@ svg:not(:root) {
   overflow: hidden; 
 }
 
-/*--- PAGINATION ------------------------------------------------------------*/
+/*--- 分页 -------------------------------------------------------------------*/
 
 .pagination {
     a{
@@ -124,7 +124,7 @@ svg:not(:root) {
     word-spacing: 10px;
 }
 
-/*--- EQUATIONS -------------------------------------------------------------*/
+/*--- 数学方程式－ -------------------------------------------------------------*/
 
 .has-jax {
     font: inherit; 
@@ -134,7 +134,7 @@ svg:not(:root) {
     color: #006699;
 }
 
-/*--- NAVIGATION BAR --------------------------------------------------------*/
+/*--- 导航栏 --------------------------------------------------------*/
 
 .navigation-bar {
     //word-spacing: 20px;
@@ -163,7 +163,7 @@ svg:not(:root) {
     }
 }
 
-/*--- TAGS ------------------------------------------------------------------*/
+/*--- 标签 ------------------------------------------------------------------*/
 
 .inline-tags {
     font-size: 14px;
@@ -177,13 +177,13 @@ svg:not(:root) {
     }
 }
 
-/*--- GLOBAL TRANSITION -----------------------------------------------------*/
+/*--- 全部过渡 -----------------------------------------------------*/
 
 b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a {
 	transition: all 0.2s ease;
 }
 
-/*--- MAIN CONTENT ----------------------------------------------------------*/
+/*--- 主要内容 ----------------------------------------------------------*/
 
 .entry-content {
     font-size: 16px;
@@ -223,6 +223,7 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a 
 }
 
 .post-date {
+	text-align: right;
     font-size: 12px;
 	text-transform: uppercase;
     color: lighten($base-color,50);
@@ -237,14 +238,14 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a 
 }
 
 header .entry-meta {
-	display: none; // hide header meta on small screens
+	display: none; // 在小屏幕上隐藏标题元
 
 	@media #{$medium} {
 		display: block;
 	}
 }
 
-/*--- POST INDEX ------------------------------------------------------------*/
+/*--- 文章索引 ------------------------------------------------------------*/
 
 #post-index {
 	#main {
@@ -264,38 +265,39 @@ header .entry-meta {
 	}
 
 	article {
-		background-color: #fff;
+		background-color: #f1f1f1; /* 文章内容背景颜色 */
 		box-shadow: 0 0 0 0, 0 6px 12px rgba($base-color,0.2);
-		border-radius: 3px;
+		border-radius: 7px; /* 文章主体倒角 */
 		margin-bottom: 20px;
 		padding: 25px 15px;
 		overflow: hidden;
-
+		/* 移动设备分辨率	*/
 		@media #{$small} {
+			/* 文章图片的控制 */
 		.featured-image {
 				display:block;
 	        	margin:-25px -15px;
 	        	padding: 0px 0px 20px 0px;
 	        }
 	    }
-
+		/* 标准分辨率 */
 		@media #{$medium} {
 			padding: 30px;
-
+			/* 文章图片的控制 */
 			.featured-image {
 				display:block;
 	        	margin:-30px -30px;
 	        	padding: 0px 0px 30px 0px;
 	        }
 		}
-
+		/* 高分辨率 */
 		@media #{$large} {
 			margin-bottom: 30px;
 			padding: 50px 80px;
-
+			/* 文章图片的控制 */
 			.featured-image {
 				display:block;
-	        	margin:-50px -80px;
+	        	margin: -50px -80px;	/* 文章图片的距顶值和缩放值 */
 	        	padding: 0px 0px 50px 0px;
 	        }
 		}
@@ -310,7 +312,7 @@ header .entry-meta {
 	}
 }
 
-/*--- FOOTER ----------------------------------------------------------------*/
+/*--- 页脚 ----------------------------------------------------------------*/
 
 .footer-wrapper {
 	margin: 2em auto;
@@ -327,14 +329,14 @@ header .entry-meta {
 	}
 }
 
-/*--- BROWSER UPGRADE -------------------------------------------------------*/
+/*--- 浏览器变更 -------------------------------------------------------*/
 
 .upgrade {
 	padding: 10px;
 	text-align: center;
 }
 
-/*--- BODY ------------------------------------------------------------------*/
+/*--- 主体 ------------------------------------------------------------------*/
 
 body {
     font-family: $base-font;
@@ -347,7 +349,7 @@ body {
     font-size: 0px + $doc-font-size;
 }
 
-/*--- HEADINGS --------------------------------------------------------------*/
+/*--- 页眉 --------------------------------------------------------------*/
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: $heading-font;
