@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- 标签 -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>Jekyll 主题 Arktos</title>
+  <meta name="description" content="网站详细描述内容">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- 站标-->
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+
+
+</head>
+
+
+<body>
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="/">首页</a>
+
+		<!-- 页面导航 -->
+	  
+	    
+	  
+	    
+	      <a href="/about" title="关于">关于</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	      <a href="/markdown" title="Markdown">Markdown</a>
+	    
+	  
+	    
+	  
+    
+    <!-- 链接导航 -->
+	  <a href="https://github.com/inmyv">源码</a>
+
+	</div>
+  
+  <!-- 页脚 -->
+	
+	  <footer>
+	
+	<span>版本 1.0.0</span>
+
+</footer>
+	
+
+</nav>
+
+    
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- 页眉 -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">  
+      <a href="/">
+        <h1>
+          <span>魅影</span>绝代
+        </h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- 页面导航 -->
+	    
+	      
+	    
+	      
+	        <a href="/about" title="关于">关于</a>
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	        <a href="/markdown" title="Markdown">Markdown</a>
+	      
+	    
+	      
+	    
+      
+      <!-- 链接导航 -->
+	    <a href="https://github.com/inmyv">源码</a>
+
+    </span>
+  </div>
+</header>
+
+
+
+
+      
+
+    <!-- 主体内容 -->
+	  <div id="container">
+		  
+		<main>
+
+		<article id="post-page">
+	<h1>Jekyll 主题 Arktos</h1>		
+	<time datetime="2019-01-11T21:46:00+08:00" class="by-line">11 Jan 2019</time>
+	
+	<div class="content">
+
+		<p>去年8月开始，我彻底从Wordpress毕业，转向了Jekyll。这一折腾又是大半年，如今折腾累了，差不多也该安定一下了。毕竟，时间和精力都是有限的，排着队要做的事情却有很多。</p>
+
+<!--more-->
+
+<p>这一版博客的主题我是本着超极简风格的目标做的，其极简程度远甚于之前做的两款Wordpress主题。为什么总是倾向于极简风格呢？原因很简单，因为我不是专业设计师，我只是一个程序员。</p>
+
+<p>这一版主题颜色只有黑白灰度，元素只有线条，配合文字图片以及大面积的留白。这样或许有些单调，所以我尽量让线条动起来，可以稍稍弥补颜色欠缺所带来的呆板感。</p>
+
+<p>我把博客部分的样式和页面提取出来，打包成gem，作为Arktos主题发布，给我这一阶段的折腾画上一个尾声。它和你在这个网站里看到的页面会稍有偏差——我删掉了首页、小说、归档等页面，这些内容我觉得对于一个普通的Jekyll博客用户来说没什么必要——此外我增添了一些博客必要的元素。</p>
+
+<p>如果你觉得单单一个博客不够的话，本站的源码也是完全开放，可以来<a href="https://github.com/erlzhang/persephone">这里</a>获取。不过这个我会改得很随意，毕竟是自己的网站！</p>
+
+<p>如果你对极简的需求和审美恰巧与我相似，且只想要一个简单的博客，可以试一试<a href="https://github.com/erlzhang/jekyll-theme-arktos">Arktos</a>，我会持续维护。</p>
+
+<p><img src="/img/arktos.png" alt="Jekyll Theme Arktos" /></p>
+
+<p>此外，我在Github Pages上给它单独配了一个预览页，如果你很好奇究竟哪里和这里不一样，可以看看<a href="https://erlzhang.github.io/arktos-demo/">这里</a>。</p>
+
+<h2 id="为什么叫arktos呢">为什么叫Arktos呢？</h2>
+
+<p>这很简单啊，Arktos是古希腊神话里的一个女神名字。如果你看过我的Github，你会发现我的私人项目名很多都是以希腊女神的名字命名的（Dysis也是，Persephone就更不用说了吧！）——这其实并无任何含义，只是一个命名习惯<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup>。</p>
+
+<h2 id="以下是详细的使用方法">以下是详细的使用方法</h2>
+
+<h3 id="安装">安装</h3>
+
+<p>把这行代码加入到你的<code class="language-plaintext highlighter-rouge">Gemfile</code>中。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s2">"jekyll-theme-arktos"</span>
+</code></pre></div></div>
+
+<p>然后在<code class="language-plaintext highlighter-rouge">_config.yml</code>中添加：</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">theme</span><span class="pi">:</span> <span class="s">jekyll-theme-arktos</span>
+</code></pre></div></div>
+
+<p>然后执行：</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bundle
+</code></pre></div></div>
+
+<p>或者手动安装：</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>gem <span class="nb">install </span>jekyll-theme-arktos
+</code></pre></div></div>
+
+<p>如果你是依托于Github Pages build的用户，以上配置都不会生效。不过在<code class="language-plaintext highlighter-rouge">_config.yml</code>中添加以下一行代码即可替代：</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>remote_theme: erlzhang/jekyll-theme-arktos
+</code></pre></div></div>
+
+<h3 id="用法">用法</h3>
+
+<p>主题支持jekyll-pagination-v2，不过你需要先开启分页。</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">pagination</span><span class="pi">:</span>
+    <span class="na">enabled</span><span class="pi">:</span> <span class="no">true</span>
+</code></pre></div></div>
+
+<p>首页默认是不显示摘要的（最好确认一下你的摘要是否正常，我发现Jekyll升级之后自动截取摘要好像失效了），如果想要显示摘要，在<code class="language-plaintext highlighter-rouge">_config.yml</code>中添加：</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">arktos</span><span class="pi">:</span>
+  <span class="na">excerpt</span><span class="pi">:</span> <span class="no">true</span>
+</code></pre></div></div>
+
+<p>无需插件，即可使用mermaid。方法如下：</p>
+
+<pre>
+```mermaid
+graph TD;
+  A--&gt;B;
+  A--&gt;C;
+  B--&gt;D;
+  C--&gt;D;
+```
+</pre>
+
+<p>以上看着是不是很眼熟？没错，这就是Github项目主页上部分内容的翻译！</p>
+
+<p>如果有问题和需求可尽情提到<a href="https://github.com/erlzhang/jekyll-theme-arktos/issues">issues</a>中。</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>我最开始是叫它Anatole，后来我发现有个Hexo主题起了这个名字，为了避免歧义（同时也是为了主题移植做准备），改名为Arktos。 <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+		
+	</div>
+</article>
+
+
+
+	  </main>
+		
+		  <!-- 文章分页 -->
+      
+
+	  </div>
+	    
+	    <!-- 页脚 -->
+	    <footer><span>记录一些容易事物...</span></footer>
+
+
+	    <!-- 脚本 -->
+      <script src="/js/main.js"></script>	
+
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+	</div>
+</body>
+</html>

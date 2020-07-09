@@ -1,17 +1,17 @@
 ---
-title: markdown语法 页面标题
-description: 文章的描述内容
-header: markdown语法 文章标题
+layout: page
+title: Markdown
+description: Markdown文档
 ---
 
-Newton是一个极简的jekyll主题，虽然github提供了github-pages服务，但是搭建博客以及样式还是得自己定制，由于别人做的主题总是有不满意的地方，所以我做了这个
+是一个极简的jekyll主题，虽然github提供了github-pages服务，但是搭建博客以及样式还是得自己定制，由于别人做的主题总是有不满意的地方，所以我做了这个
 主题，基本还原github的markdown语法，完全兼容中文。
 
 1. TOC
 {:toc}
 
 ---
-
+<h1> 一级标题 </h1>
 <h2> 二级标题 </h2>
 <h3> 三级标题 </h3>
 <h4> 四级标题 </h4>
@@ -36,7 +36,7 @@ int main(){
   cout<<"hello world!";
   return 0;
 }
-//这是一段很长的注释，人生难免起起伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏
+//这是一段很长的注释，人生难免起起伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏伏
 ```
 
 ## 各种字体
@@ -51,14 +51,14 @@ int main(){
 
 ## 表格
 
-名字       | 语文         | 数学               
-:---------: | :----------: | :-----------:
-张三       | 20           | 80   
-李四       | 80           | 20
-小花       | 100          | 100
+名字|语文|数学|数学|数学
+:-:|:-:|:-:|:-:|:-:
+张人三人三|20|80|80|80
+李档人四|80|20|20|20
+小花|100|100|100|100
 
 ## 图片
-![girl]({{ site.url }}{{ site.baseurl }}/assets/img/girl.jpg)
+![图片](img/img-test.png)
 
 ## 无序列表
 - 无
@@ -72,25 +72,28 @@ int main(){
 3. 列
 4. 表
 
+
 ## 外部代码
 可以通过社交网站的外链提供视频或者图片等服务，例如以下的视频
 
-<iframe src="//player.bilibili.com/player.html?aid=21722417&cid=35820632&page=1" allowfullscreen="true"> </iframe>
+<iframe src="https://player.vimeo.com/video/347965035" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/347965035">Sojourn A visual Proverb</a> from <a href="https://vimeo.com/user10788902">Jonathan Aubrie Lewis</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
-当然也可以插入音乐
+当然也可以插入音乐(更改歌曲的ID）
 
-<audio  src="http://music.163.com/song/media/outer/url?id=557581284.mp3" controls preload></audio>
+<audio  src="http://music.163.com/song/media/outer/url?id=1449782659.mp3" controls preload></audio>
 
 ## 内联html标签
 markdown支持任何html语法
 
+
 ## 水平线
-----
+---
 
 ## 数学公式
 
-$$ 
-	\frac{\mathrm{d}}{\mathrm{d}t} \left ( \frac {\partial  L}{\partial \dot{q}_j} \right ) =  \frac {\partial L}{\partial q_j} 
+$$
+x = {-b \pm \sqrt{b^2-4ac} \over 2a}.
 $$
 
 
@@ -102,3 +105,4 @@ $$
 - [Markdown Basics](https://daringfireball.net/projects/markdown/basics)
 - [GitHub Flavoured Markdown Spec](https://github.github.com/gfm/)
 - [Basic writing and formatting syntax](https://help.github.com/articles/basic-writing-and-formatting-syntax/#lists)
+

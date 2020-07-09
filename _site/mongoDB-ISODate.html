@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- 标签 -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>关于mongoDB对时区的处理</title>
+  <meta name="description" content="网站详细描述内容">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- 站标-->
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+
+
+</head>
+
+
+<body>
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="/">首页</a>
+
+		<!-- 页面导航 -->
+	  
+	    
+	  
+	    
+	      <a href="/about" title="关于">关于</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	      <a href="/markdown" title="Markdown">Markdown</a>
+	    
+	  
+	    
+	  
+    
+    <!-- 链接导航 -->
+	  <a href="https://github.com/inmyv">源码</a>
+
+	</div>
+  
+  <!-- 页脚 -->
+	
+	  <footer>
+	
+	<span>版本 1.0.0</span>
+
+</footer>
+	
+
+</nav>
+
+    
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- 页眉 -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">  
+      <a href="/">
+        <h1>
+          <span>魅影</span>绝代
+        </h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- 页面导航 -->
+	    
+	      
+	    
+	      
+	        <a href="/about" title="关于">关于</a>
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	        <a href="/markdown" title="Markdown">Markdown</a>
+	      
+	    
+	      
+	    
+      
+      <!-- 链接导航 -->
+	    <a href="https://github.com/inmyv">源码</a>
+
+    </span>
+  </div>
+</header>
+
+
+
+
+      
+
+    <!-- 主体内容 -->
+	  <div id="container">
+		  
+		<main>
+
+		<article id="post-page">
+	<h1>关于mongoDB对时区的处理</h1>		
+	<time datetime="2016-05-02T00:00:00+08:00" class="by-line">02 May 2016</time>
+	
+	<div class="content">
+
+		<p>在mongoDB数据库中，时间的保存是ISODate类型，orm关系映射为java.util.Date类型，其保存的时间与我们会有8小时的区别（保存的时间比我们早了8个小时）。</p>
+
+<p>原数据为：</p>
+<pre><code class="language-Bash">Person [id=11188, name=doctorwho, age=888888, birth=2016-01-01 13:55:00]
+</code></pre>
+
+<p>mongoDB数据库中为：</p>
+<pre><code class="language-mongoDB">{ 
+    "_id" : "11188", 
+    "_class" : "com.doctor.domain.Person", 
+    "name" : "doctorwho", 
+    "age" : NumberInt(888888), 
+    "birth" : ISODate("2016-01-01T05:55:00.000+0000")
+}
+</code></pre>
+
+<p>那我们用时间查询数据的时候，看下java 驱动如何做的（部分日志）：</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.doctor.springdoc</span><span class="o">;</span>
+ 
+<span class="kn">import</span> <span class="nn">java.time.LocalDateTime</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.time.ZoneId</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.time.ZonedDateTime</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Date</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
+ 
+<span class="kn">import</span> <span class="nn">org.springframework.context.support.ClassPathXmlApplicationContext</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.MongoTemplate</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.query.Criteria</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.query.Query</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.query.Update</span><span class="o">;</span>
+ 
+<span class="kn">import</span> <span class="nn">com.doctor.domain.Person</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.mongodb.WriteResult</span><span class="o">;</span>
+ 
+<span class="cm">/**
+ * JSONSerializers L205-216有关mongoDB对时间的处理ISODate与我们时区相差8小时（做个时区转换）
+ * 
+ * @author sdcuike
+ *
+ * @time 2015年12月27日 下午10:54:16
+ */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SavingUpdatingRemovingDocuments</span> <span class="o">{</span>
+ 
+    <span class="cm">/**
+     * @param args
+     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">ClassPathXmlApplicationContext</span> <span class="n">context</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ClassPathXmlApplicationContext</span><span class="o">(</span><span class="s">"classpath:/mongoDBConfig/spring-mongoDB.xml"</span><span class="o">);</span>
+        <span class="nc">MongoTemplate</span> <span class="n">mongoTemplate</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="na">getBean</span><span class="o">(</span><span class="nc">MongoTemplate</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+ 
+        <span class="nc">Person</span> <span class="n">person</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Person</span><span class="o">(</span><span class="s">"doctorwho"</span><span class="o">,</span> <span class="mi">28888</span><span class="o">,</span> <span class="s">"11188"</span><span class="o">);</span>
+ 
+        <span class="nc">LocalDateTime</span> <span class="n">localDateTime</span> <span class="o">=</span> <span class="nc">LocalDateTime</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="mi">2016</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">13</span><span class="o">,</span> <span class="mi">55</span><span class="o">);</span>
+        <span class="nc">ZonedDateTime</span> <span class="n">zonedDateTime</span> <span class="o">=</span> <span class="n">localDateTime</span><span class="o">.</span><span class="na">atZone</span><span class="o">(</span><span class="nc">ZoneId</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">"Asia/Shanghai"</span><span class="o">));</span>
+        <span class="n">person</span><span class="o">.</span><span class="na">setBirth</span><span class="o">(</span><span class="nc">Date</span><span class="o">.</span><span class="na">from</span><span class="o">(</span><span class="n">zonedDateTime</span><span class="o">.</span><span class="na">toInstant</span><span class="o">()));</span>
+ 
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">person</span><span class="o">);</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">mongoTemplate</span><span class="o">.</span><span class="na">findById</span><span class="o">(</span><span class="n">person</span><span class="o">.</span><span class="na">getId</span><span class="o">(),</span> <span class="nc">Person</span><span class="o">.</span><span class="na">class</span><span class="o">)</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">mongoTemplate</span><span class="o">.</span><span class="na">insert</span><span class="o">(</span><span class="n">person</span><span class="o">);</span>
+        <span class="o">}</span>
+ 
+        <span class="nc">Person</span> <span class="n">findById</span> <span class="o">=</span> <span class="n">mongoTemplate</span><span class="o">.</span><span class="na">findById</span><span class="o">(</span><span class="n">person</span><span class="o">.</span><span class="na">getId</span><span class="o">(),</span> <span class="nc">Person</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">findById</span><span class="o">);</span>
+ 
+        <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Person</span><span class="o">&gt;</span> <span class="n">find</span> <span class="o">=</span> <span class="n">mongoTemplate</span><span class="o">.</span><span class="na">find</span><span class="o">(</span><span class="nc">Query</span><span class="o">.</span><span class="na">query</span><span class="o">(</span><span class="nc">Criteria</span><span class="o">.</span><span class="na">where</span><span class="o">(</span><span class="s">"name"</span><span class="o">).</span><span class="na">is</span><span class="o">(</span><span class="s">"doctorwho"</span><span class="o">).</span><span class="na">and</span><span class="o">(</span><span class="s">"age"</span><span class="o">).</span><span class="na">is</span><span class="o">(</span><span class="mi">28888</span><span class="o">)),</span> <span class="nc">Person</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+        <span class="n">find</span><span class="o">.</span><span class="na">forEach</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">::</span><span class="n">println</span><span class="o">);</span>
+ 
+        <span class="nc">WriteResult</span> <span class="n">updateMulti</span> <span class="o">=</span> <span class="n">mongoTemplate</span><span class="o">.</span><span class="na">updateMulti</span><span class="o">(</span><span class="nc">Query</span><span class="o">.</span><span class="na">query</span><span class="o">(</span><span class="nc">Criteria</span><span class="o">.</span><span class="na">where</span><span class="o">(</span><span class="s">"age"</span><span class="o">).</span><span class="na">is</span><span class="o">(</span><span class="mi">28888</span><span class="o">)),</span> <span class="nc">Update</span><span class="o">.</span><span class="na">update</span><span class="o">(</span><span class="s">"age"</span><span class="o">,</span> <span class="mi">888888</span><span class="o">),</span> <span class="nc">Person</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">updateMulti</span><span class="o">.</span><span class="na">getN</span><span class="o">());</span>
+ 
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"time query"</span><span class="o">);</span>
+        <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Person</span><span class="o">&gt;</span> <span class="n">find2</span> <span class="o">=</span> <span class="n">mongoTemplate</span><span class="o">.</span><span class="na">find</span><span class="o">(</span><span class="nc">Query</span><span class="o">.</span><span class="na">query</span><span class="o">(</span><span class="nc">Criteria</span><span class="o">.</span><span class="na">where</span><span class="o">(</span><span class="s">"birth"</span><span class="o">).</span><span class="na">is</span><span class="o">(</span><span class="n">person</span><span class="o">.</span><span class="na">getBirth</span><span class="o">())),</span> <span class="nc">Person</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+        <span class="n">find2</span><span class="o">.</span><span class="na">forEach</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">::</span><span class="n">println</span><span class="o">);</span>
+        <span class="c1">// JSONSerializers L205-216有关mongoDB对时间的处理ISODate与我们时区相差8小时（做个时区转换）</span>
+    <span class="o">}</span>
+ 
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>time query:</p>
+
+<ul>
+  <li>
+    <p>01-02 22:12:37.195 main  DEBUG org.springframework.data.mongodb.core.MongoTemplate - find using query: { “birth” : { “$date” : “2016-01-01T05:55:00.000Z”}} fields: null for class: class com.doctor.domain.Person in collection: person</p>
+  </li>
+  <li>
+    <p>01-02 22:12:37.196 main  DEBUG org.springframework.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[sdcuike]
+Person [id=11188, name=doctorwho, age=888888,birth=2016-01-01 13:55:00]</p>
+  </li>
+</ul>
+
+<p>{ “birth” : { “$date” : “2016-01-01T05:55:00.000Z”}}查询语句按我们的相差时间查询，返回的数据确实是我们需要的，即使数据库中我们看到的iso date相差8个小时。其实java 驱动帮我们做了转换。</p>
+
+<p>com.mongodb.util.JSONSerializers.LegacyDateSerializer代码：</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">private</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">LegacyDateSerializer</span> <span class="kd">extends</span> <span class="nc">CompoundObjectSerializer</span> <span class="o">{</span>
+ 
+        <span class="nc">LegacyDateSerializer</span><span class="o">(</span><span class="nc">ObjectSerializer</span> <span class="n">serializer</span><span class="o">)</span> <span class="o">{</span>
+            <span class="kd">super</span><span class="o">(</span><span class="n">serializer</span><span class="o">);</span>
+        <span class="o">}</span>
+ 
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">serialize</span><span class="o">(</span><span class="nc">Object</span> <span class="n">obj</span><span class="o">,</span> <span class="nc">StringBuilder</span> <span class="n">buf</span><span class="o">)</span> <span class="o">{</span>
+            <span class="nc">Date</span> <span class="n">d</span> <span class="o">=</span> <span class="o">(</span><span class="nc">Date</span><span class="o">)</span> <span class="n">obj</span><span class="o">;</span>
+            <span class="nc">SimpleDateFormat</span> <span class="n">format</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SimpleDateFormat</span><span class="o">(</span>
+                    <span class="s">"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"</span><span class="o">);</span>
+            <span class="n">format</span><span class="o">.</span><span class="na">setCalendar</span><span class="o">(</span><span class="k">new</span> <span class="nc">GregorianCalendar</span><span class="o">(</span>
+                    <span class="k">new</span> <span class="nf">SimpleTimeZone</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="s">"GMT"</span><span class="o">)));</span>
+            <span class="n">serializer</span><span class="o">.</span><span class="na">serialize</span><span class="o">(</span>
+                    <span class="k">new</span> <span class="nf">BasicDBObject</span><span class="o">(</span><span class="s">"$date"</span><span class="o">,</span> <span class="n">format</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">d</span><span class="o">)),</span>
+                    <span class="n">buf</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+</code></pre></div></div>
+
+<p>所以在这里<code class="language-plaintext highlighter-rouge">GregorianCalendar</code> ，做了时区转换。</p>
+
+		
+	</div>
+</article>
+
+
+
+	  </main>
+		
+		  <!-- 文章分页 -->
+      
+
+	  </div>
+	    
+	    <!-- 页脚 -->
+	    <footer><span>记录一些容易事物...</span></footer>
+
+
+	    <!-- 脚本 -->
+      <script src="/js/main.js"></script>	
+
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+	</div>
+</body>
+</html>

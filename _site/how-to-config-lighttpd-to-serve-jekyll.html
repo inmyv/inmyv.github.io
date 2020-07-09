@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- 标签 -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>基于Lighttpd的Jekyll博客配置及优化</title>
+  <meta name="description" content="怎么使用Lighttpd配置Jekyll博客服务，并进行速度优化、seo优化。">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- 站标-->
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+
+
+</head>
+
+
+<body>
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="/">首页</a>
+
+		<!-- 页面导航 -->
+	  
+	    
+	  
+	    
+	      <a href="/about" title="关于">关于</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	      <a href="/markdown" title="Markdown">Markdown</a>
+	    
+	  
+	    
+	  
+    
+    <!-- 链接导航 -->
+	  <a href="https://github.com/inmyv">源码</a>
+
+	</div>
+  
+  <!-- 页脚 -->
+	
+	  <footer>
+	
+	<span>版本 1.0.0</span>
+
+</footer>
+	
+
+</nav>
+
+    
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- 页眉 -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">  
+      <a href="/">
+        <h1>
+          <span>魅影</span>绝代
+        </h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- 页面导航 -->
+	    
+	      
+	    
+	      
+	        <a href="/about" title="关于">关于</a>
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	        <a href="/markdown" title="Markdown">Markdown</a>
+	      
+	    
+	      
+	    
+      
+      <!-- 链接导航 -->
+	    <a href="https://github.com/inmyv">源码</a>
+
+    </span>
+  </div>
+</header>
+
+
+
+
+      
+
+    <!-- 主体内容 -->
+	  <div id="container">
+		  
+		<main>
+
+		<article id="post-page">
+	<h1>基于Lighttpd的Jekyll博客配置及优化</h1>		
+	<time datetime="2018-12-07T21:19:26+08:00" class="by-line">07 Dec 2018</time>
+	
+	<div class="content">
+
+		<p>某天脑子一热给自己搞了个VPS，单核，10G硬盘，512M内存。这个配置各种web应用基本都不要想了，但是用Jekyll搭建个静态博客还是绰绰有余的。</p>
+
+<!--more-->
+
+<p>从Wordpress转向Jekyll之后，我的博客最早也是托管在Github Page上的。但是Github Page自制插件全部用不了，满足不了需求，只能在本地 <code class="language-plaintext highlighter-rouge">build</code> 之后再 <code class="language-plaintext highlighter-rouge">push</code> 到Github Page，很麻烦。最后还是选择部署在服务器上， Github仓库里设一个<code class="language-plaintext highlighter-rouge">callback</code>，每次 <code class="language-plaintext highlighter-rouge">push</code> 的操作，服务器都会同步拉取仓库并执行<code class="language-plaintext highlighter-rouge">build</code>。</p>
+
+<p>市面上常用的webserver当属Apache和Nginx，后者我在工作中用过，前者更是Wordpress标配，最后选定Lighttpd是因为它的轻量级，同时也是本着尝试点新鲜事物的目的。</p>
+
+<h2 id="安装lighttpd">安装Lighttpd</h2>
+
+<p><strong>系统环境：Ubuntu 18.04</strong></p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install </span>lighttpd
+</code></pre></div></div>
+
+<p>自动安装下来的版本应当是1.4.50。</p>
+
+<p>安装好之后配置非常简单，打开系统自动生成的 <code class="language-plaintext highlighter-rouge">/etc/lighttpd/lighttpd.conf</code> 文件，把 <code class="language-plaintext highlighter-rouge">server.document-root</code> 改为静态网站的根目录即可，其他都可以保持原配置不变。我这里直接把Jekyll <code class="language-plaintext highlighter-rouge">build</code> 后的 <code class="language-plaintext highlighter-rouge">_site</code> 文件夹作为网站根目录。</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">server</span>.<span class="n">document</span>-<span class="n">root</span> = <span class="s2">"/home/www/_site"</span>
+</code></pre></div></div>
+
+<p>然后启动server：</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">start</span> <span class="n">lighttpd</span>
+</code></pre></div></div>
+
+<p>如果域名已经成功解析，打开网址直接就可以看到博客。如果你像我一样懒，或不想折腾，或觉得无所谓只想博客能正常访问，那么这样子就可以了——我就这么跑了好几个月！</p>
+
+<p>当然，如果想折腾，可折腾的内容还是很多的。</p>
+
+<h2 id="配置优化">配置优化</h2>
+
+<h3 id="404页面配置">404页面配置</h3>
+
+<p>博客跑了好几个月我才发现没有404页面。Jekyll在创建项目库的时候根目录是会有一个默认的 <code class="language-plaintext highlighter-rouge">404.html</code>，但Lighttpd这边需要额外的配置。配置的方法是设置 <code class="language-plaintext highlighter-rouge">server.errorfile-prefix</code> ，可以是一个目录，也可以是一个目录加文件名前缀。Lighttpd会自动给这个路径加上 <code class="language-plaintext highlighter-rouge">404.html</code> 、<code class="language-plaintext highlighter-rouge">500.html</code>。</p>
+
+<p>例如，设置 <code class="language-plaintext highlighter-rouge">server.errorfile-prefix = "/home/www/error-"</code> ，lighttpd会找 <code class="language-plaintext highlighter-rouge">/home/www/error-404.html</code> 作为404页面， <code class="language-plaintext highlighter-rouge">/home/www/error-500.html</code> 作为500页面等。</p>
+
+<p>Jekyll 这里和根目录保持一致就可以了。</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">server</span>.<span class="n">errorfile</span>-<span class="n">prefix</span> = <span class="s2">"/home/www/_site/"</span>
+</code></pre></div></div>
+
+<h3 id="速度优化">速度优化</h3>
+
+<p>lighttpd默认生成的配置文件里已经开启了文件压缩，即 <code class="language-plaintext highlighter-rouge">mod_compress</code> 模块。但是需要设置静态资源过期时间。</p>
+
+<h4 id="设置静态资源过期时间">设置静态资源过期时间</h4>
+
+<p>首先，要引入 <code class="language-plaintext highlighter-rouge">mod_expire</code> 模块。</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">server</span>.<span class="n">modules</span> = (
+	<span class="c"># ...
+</span>	<span class="s2">"mod_expire"</span>
+)
+</code></pre></div></div>
+
+<p>然后针对不同的静态资源设置过期时间，这个配置方法很有意思：<code class="language-plaintext highlighter-rouge">access plus #{ n years/months/days }</code>。例如 <code class="language-plaintext highlighter-rouge">access plus 30 days</code> 就是30天之后过期。不过根据官网的demo，1天之后过期也要用 <code class="language-plaintext highlighter-rouge">days</code> 而不是 <code class="language-plaintext highlighter-rouge">day</code>，这难道不是语法错误么？</p>
+
+<p>静态资源过期时间设置多久才好？这个是要具体问题具体分析的。不过懒得去考虑这个事情，就直接设置成一年了。</p>
+
+<p>图片不会有什么意外，但css和js经常会有改动，页面引用资源的时候要注意清除缓存，我的方式是，在 <code class="language-plaintext highlighter-rouge">_config.yml</code> 中设置版本号，例如： <code class="language-plaintext highlighter-rouge">main.css?v=1.0.0</code> 。</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$<span class="n">HTTP</span>[<span class="s2">"url"</span>] =~ <span class="s2">"^/(assets|img)/"</span> (
+	<span class="n">expire</span>.<span class="n">url</span> = ( <span class="s2">""</span> =&gt; <span class="s2">"access plus 1 years"</span> )
+)
+</code></pre></div></div>
+
+<h3 id="301重定向">301重定向</h3>
+
+<p>301重定向是经常会碰见的需求，我的博客就有两处需要用到重定向：</p>
+
+<ol>
+  <li>我的三个域名目前都要重定向到 <code class="language-plaintext highlighter-rouge">yexiqingxi.com</code>；</li>
+  <li>博客文章的固定链接修改过一次，而原有的文章百度已有收录，要重定向到新链接上。</li>
+</ol>
+
+<p>通过Lighttpd也是非常好实现。</p>
+
+<p>Lighttpd 重定向要引入 <code class="language-plaintext highlighter-rouge">mod_redirect</code> 模块（默认已经引入）。</p>
+
+<p>先说一个常见的需求：seo优化会建议在带 <code class="language-plaintext highlighter-rouge">www</code> 的域名和不带 <code class="language-plaintext highlighter-rouge">www</code> 的中间保留一个，另一个做重定向，不然搜索引擎会把这两个域名看作两个网站。</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$<span class="n">HTTP</span>[<span class="s2">"host"</span>] =~ <span class="s2">"^www.yexiqingxi.com$"</span> {
+	<span class="n">url</span>.<span class="n">redirect</span> = (
+		<span class="s2">"^/(.*)"</span> =&gt; <span class="s2">"http://yexiqingxi.com/$1"</span>
+	)
+}
+</code></pre></div></div>
+
+<p>顺便说一下修改固定链接之后怎么做重定向。Jekyll默认的文章链接是 <code class="language-plaintext highlighter-rouge">/year/month/day/title.ext</code> 的形式——太长了，我把它改成了 <code class="language-plaintext highlighter-rouge">/blog/title.ext</code> 的形式。</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$<span class="n">HTTP</span>[<span class="s2">"host"</span>] =~ <span class="s2">"^yexiqingxi.com$"</span> {
+	<span class="n">url</span>.<span class="n">redirect</span> = (
+		<span class="s2">"^/2018/\d*/\d*/(.*)"</span> =&gt; <span class="s2">"http://yexiqingxi.com/blog/$1"</span>
+	)
+}
+</code></pre></div></div>
+
+<h3 id="https">https</h3>
+
+<p>我是觉得一个普普通通的博客没什么必要配个 <code class="language-plaintext highlighter-rouge">https</code>， 但是之前用的Netlifycms用的登陆认证 <code class="language-plaintext highlighter-rouge">https</code>，就给 erl.im 搞了个。不过证书的获取和安装都是别人帮我做的，详细的我也不知，我这里就说一下 Lighttpd 要怎么配置吧！</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$<span class="n">SERVER</span>[<span class="s2">"socket"</span>] = <span class="s2">":443"</span> {
+	<span class="n">ssl</span>.<span class="n">engine</span> = <span class="s2">"enable"</span>
+	<span class="n">ssl</span>.<span class="n">pemfile</span> = <span class="s2">"/etc/.../.../server.pem"</span>
+	<span class="n">ssl</span>.<span class="n">ca</span>-<span class="n">file</span> = <span class="s2">"/etc/../../fullchain.pem"</span>
+	<span class="n">server</span>.<span class="n">document</span>-<span class="n">root</span> = <span class="s2">"/home/www/_site"</span>
+}
+</code></pre></div></div>
+
+<p>嗯，就是怎么简单……</p>
+
+<h3 id="图片防盗链">图片防盗链</h3>
+
+<p>原理就是判断请求的 <code class="language-plaintext highlighter-rouge">referer</code>，非本站请求拒绝访问（也有的是重定向到首页的）。</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$<span class="n">HTTP</span>[<span class="s2">"referer"</span>] !~ <span class="s2">"^($|http://yexiqingxi\.com)"</span> {
+    <span class="n">url</span>.<span class="n">access</span>-<span class="n">deny</span> = ( <span class="s2">".jpg"</span>, <span class="s2">".jpeg"</span>, <span class="s2">".png"</span> )
+  }
+</code></pre></div></div>
+
+<p>这样外站引用图片时会返回 <code class="language-plaintext highlighter-rouge">403</code>。顺便说一句，破解这种“反盗链”法也是很容易的，嵌个 <code class="language-plaintext highlighter-rouge">iframe</code> 就可以了，这样 <code class="language-plaintext highlighter-rouge">referer</code> 会为空，就和在浏览器里直接打开图片一个道理。</p>
+
+		
+	</div>
+</article>
+
+
+
+	  </main>
+		
+		  <!-- 文章分页 -->
+      
+
+	  </div>
+	    
+	    <!-- 页脚 -->
+	    <footer><span>记录一些容易事物...</span></footer>
+
+
+	    <!-- 脚本 -->
+      <script src="/js/main.js"></script>	
+
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+	</div>
+</body>
+</html>

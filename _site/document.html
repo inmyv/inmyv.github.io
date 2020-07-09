@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- 标签 -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>博客使用文档 页面标题</title>
+  <meta name="description" content="文章的描述内容">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- 站标-->
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+
+
+</head>
+
+
+<body>
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="/">首页</a>
+
+		<!-- 页面导航 -->
+	  
+	    
+	  
+	    
+	      <a href="/about" title="关于">关于</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	      <a href="/markdown" title="Markdown">Markdown</a>
+	    
+	  
+	    
+	  
+    
+    <!-- 链接导航 -->
+	  <a href="https://github.com/inmyv">源码</a>
+
+	</div>
+  
+  <!-- 页脚 -->
+	
+	  <footer>
+	
+	<span>版本 1.0.0</span>
+
+</footer>
+	
+
+</nav>
+
+    
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- 页眉 -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">  
+      <a href="/">
+        <h1>
+          <span>魅影</span>绝代
+        </h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- 页面导航 -->
+	    
+	      
+	    
+	      
+	        <a href="/about" title="关于">关于</a>
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	        <a href="/markdown" title="Markdown">Markdown</a>
+	      
+	    
+	      
+	    
+      
+      <!-- 链接导航 -->
+	    <a href="https://github.com/inmyv">源码</a>
+
+    </span>
+  </div>
+</header>
+
+
+
+
+      
+
+    <!-- 主体内容 -->
+	  <div id="container">
+		  
+		<main>
+
+		<article id="post-page">
+	<h1>博客使用文档 文章标题</h1>		
+	<time datetime="2018-12-04T00:00:00+08:00" class="by-line">04 Dec 2018</time>
+	
+	<div class="content">
+
+		<p>博客基于<a href="https://jekyllrb.com/">jekyll</a>搭建，你也可以参考<a href="https://www.jekyll.com.cn/">中文文档</a>(但是内容不全)，博客主题
+吸收多平台的优点，摒弃所有的繁杂缺点搭建而成，主要集成了github平台的markdown语法样式和简书的字体。
+如果你想要快速利用我的模板搭建博客，请往下看。</p>
+
+<ol id="markdown-toc">
+  <li><a href="#fork我的仓库" id="markdown-toc-fork我的仓库">fork我的仓库</a></li>
+  <li><a href="#个性化定制" id="markdown-toc-个性化定制">个性化定制</a>    <ol>
+      <li><a href="#修改_configyml" id="markdown-toc-修改_configyml">修改_config.yml</a></li>
+      <li><a href="#清空_posts文件夹" id="markdown-toc-清空_posts文件夹">清空_posts文件夹</a></li>
+      <li><a href="#添加文章" id="markdown-toc-添加文章">添加文章</a></li>
+      <li><a href="#将修改后的仓库pull到github" id="markdown-toc-将修改后的仓库pull到github">将修改后的仓库pull到github</a></li>
+    </ol>
+  </li>
+  <li><a href="#自定义域名" id="markdown-toc-自定义域名">自定义域名</a></li>
+  <li><a href="#本地调试" id="markdown-toc-本地调试">本地调试</a></li>
+</ol>
+
+<h2 id="fork我的仓库">fork我的仓库</h2>
+<p>你只要fork我的仓库，然后将仓库名字改为<code class="language-plaintext highlighter-rouge">usename.github.io</code>即可。其中<code class="language-plaintext highlighter-rouge">usename</code>是你的github账户名称。
+过一会(因为github引擎渲染可能需要一分钟左右)，然后在浏览器中输入<code class="language-plaintext highlighter-rouge">usename.github.io</code>网址，就能看见你的
+博客了</p>
+
+<h2 id="个性化定制">个性化定制</h2>
+<p>前面你已经成功将博客移植到你的仓库，但是很多数据都是我的，所以你需要将仓库pull到本地进行修改，主要修改以下几项即可。</p>
+
+<h3 id="修改_configyml">修改_config.yml</h3>
+<p>该文件主要是一些个人信息，将其中的个人信息改成你的信息就行。</p>
+
+<h3 id="清空_posts文件夹">清空_posts文件夹</h3>
+<p>该文件夹里面的文章都是我个人的，全部删掉。</p>
+
+<h3 id="添加文章">添加文章</h3>
+<p>添加的文章是利用markdown语法写的，写文章之前需要一个头部标识，即在文章前面添加如下信息</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">你的标题</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+<p>接下去就可以继续写文章了
+注意，文章的命名是<code class="language-plaintext highlighter-rouge">year-month-day-title.md</code>，因为这是jekyll的读取格式。</p>
+
+<h3 id="将修改后的仓库pull到github">将修改后的仓库pull到github</h3>
+<p>做完上面的修改，就可以将仓库push到github上，过一会，你的博客就全部渲染好了。</p>
+
+<h2 id="自定义域名">自定义域名</h2>
+<p>你可以自定义域名，将域名存到CNAME文件夹中</p>
+
+<h2 id="本地调试">本地调试</h2>
+<p>jekyll是基于ruby的maekdown转换器，为了方便，建议在本机调试好再发送到服务器，需要下载ruby和jekyll</p>
+
+
+		
+	</div>
+</article>
+
+
+
+	  </main>
+		
+		  <!-- 文章分页 -->
+      
+
+	  </div>
+	    
+	    <!-- 页脚 -->
+	    <footer><span>记录一些容易事物...</span></footer>
+
+
+	    <!-- 脚本 -->
+      <script src="/js/main.js"></script>	
+
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+	</div>
+</body>
+</html>

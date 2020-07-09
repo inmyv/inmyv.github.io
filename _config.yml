@@ -8,7 +8,7 @@ author:
   url: "https://www.artlee.cn"
 
 # 部署设置
-baseurl: / # 将其更改为相对路径（例如：/blog/），或者只保留一个 “/”
+baseurl:  # 将其更改为相对路径（例如：/blog/），或者只保留一个 “/”
 markdown: kramdown
 source: .
 destination: ./_site
