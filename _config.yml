@@ -30,6 +30,7 @@ defaults:
 gems:
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-admin
 
 # 自定义变量
 version: "1.0.0"
