@@ -4,6 +4,7 @@ copyright:        Your Name
 url: # add your custom site url (format: https://example.com)
 
 
+<<<<<<< HEAD
 future:      false  # publish future dated posts --  true, false (default)
 highlighter: rouge
 markdown:    kramdown
@@ -29,6 +30,13 @@ paginate: 5
 #  entity_output: as_char
 #  toc_levels: 1..6
 #  enable_coderay: false
+=======
+# 插件
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-admin
+>>>>>>> f4dad9f99119a1035db98a15e2d3531a05e172e4
 
 include:
   - .htaccess
