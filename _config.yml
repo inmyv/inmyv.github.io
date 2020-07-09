@@ -27,7 +27,7 @@ defaults:
       layout: "post"
 
 # 插件
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-admin
