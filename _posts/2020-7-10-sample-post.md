@@ -44,7 +44,7 @@ int main(){
 2. *意大利斜体*
 3. ~~删除线~~
 4. `文字标记`
-5. [链接](https://github.com/doublesand)
+5. [链接](https://github.com/)
 
 ### 引用
 > 金钱可以购买时间 - 鲁迅
@@ -58,7 +58,7 @@ int main(){
 小花 | 100 | 100 | 200
 
 ### 图片
-![girl](images/img-test.png)
+![girl](assets/images/img-test.png)
 
 ### 无序列表
 - 无
