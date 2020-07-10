@@ -5,7 +5,7 @@ title: 视频帖子
 subtitle: 这是视频文章的简述。
 tags: 示例帖子
       视频
-featured-image: /images/header/library-header-1.png
+featured-image: images/header/fiber-optic-header-1.png
 date-string: 2020年07月10日
 ---
 <center>

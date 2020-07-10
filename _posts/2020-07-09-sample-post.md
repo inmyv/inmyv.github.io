@@ -3,7 +3,7 @@ layout: post
 categories: posts
 title: 样本文章
 subtitle: 这是一个测试文章
-featured-image: /images/header/clean-and-simple-header.jpg
+featured-image: images/header/silicon-chip-header-1.png
 tags: 样本帖子
 date-string: 2020年07月10日
 ---

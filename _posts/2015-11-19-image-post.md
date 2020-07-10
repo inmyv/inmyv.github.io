@@ -4,7 +4,7 @@ categories: posts
 title: 图片发布
 subtitle: 这是图片文章的简述。
 tags: 样本帖子
-featured-image: /images/header/bokeh-header-1.png
+featured-image: images/header/library-header-1.png
 date-string: 2020年07月10日
 ---
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
