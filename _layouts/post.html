@@ -10,7 +10,7 @@
     <!-- 标题图片 -->
     <!-- <center>
         <span class="main-header-image">
-            <a href="/"><img src="/images/header/clean-and-simple-header.jpg"></a>
+            <a href="/"><img src="图片地址"></a>
         </span>
     </center> -->
     <br>
@@ -40,10 +40,12 @@
             <h1 class="entry-title">
                 <a>{{ page.title }}</a>
             </h1>
+            <!-- 文章页面副标题 
             <h3 class="entry-subtitle">
                 <a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ page.subtitle }}</a>
             </h3>
-
+            -->
+            
             <hr>
 
             <!-- 发布内容 -->
@@ -58,14 +60,14 @@
             <div class="inline-tags">
                 <span>
                     {% for tag in page.tags %}
-                        <a href="pages/tags#{{tag}}">#{{ tag }}&nbsp;&nbsp;&nbsp;</a>
+                        <a href="/pages/tags#{{tag}}">#{{ tag }}&nbsp;&nbsp;&nbsp;</a>
                     {% endfor %}
                 </span>
             </div>
 
             <br>
 
-            <!-- 发布日期 -->
+            <!-- 编辑日期 -->
             <div class="post-date">
                 {{ page.date-string }}
             </div>

@@ -6,7 +6,7 @@ subtitle: 这是语法高亮的文章简述。
 tags: 示例帖子
       代码
       突出显示
-featured-image: /images/header/fiber-optic-header-1.png
+featured-image: https://s1.ax1x.com/2020/07/10/UK6kut.jpg
 date-string: 2020年07月10日
 ---
 
