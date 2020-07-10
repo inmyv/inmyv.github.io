@@ -1,12 +1,9 @@
 ---
 layout: post
-categories: posts
-title: 视频帖子
-subtitle: 这是视频文章的简述。
-tags: 示例帖子
-      视频
+title: Markdown 插入视频的文章
+subtitle: 发布一篇带有视频的文章。
+tags: Markdown 主题 插入视频
 featured-image: https://s1.ax1x.com/2020/07/10/UK6kut.jpg
-date-string: 2020年07月10日
 ---
 <center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EqAnYPiZiNA" frameborder="0" allowfullscreen></iframe>

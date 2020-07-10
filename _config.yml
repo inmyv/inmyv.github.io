@@ -20,7 +20,7 @@ sass:
 permalink: /:title
 
 # 显示在首页上的帖子数量
-paginate: 5
+paginate: 2
 
 kramdown:
   input: GFM

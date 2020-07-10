@@ -1,13 +1,9 @@
 ---
 layout: post
-categories: posts
-title: 语法高亮显示
-subtitle: 这是语法高亮的文章简述。
-tags: 示例帖子
-      代码
-      突出显示
+title: Markdown 语法高亮显示
+subtitle: 文章内写入代码高亮样式。
+tags: Markdown 主题 代码高亮
 featured-image: https://s1.ax1x.com/2020/07/10/UK6kut.jpg
-date-string: 2020年07月10日
 ---
 
 语法高亮显示是一项功能，可根据术语类别以不同的颜色和字体显示源代码。 由于结构和语法错误在视觉上都是不同的，因此此功能有助于以结构化语言（例如编程语言或标记语言）进行书写。 突出显示不影响文本本身的含义； 它仅适用于人类读者。[^1]

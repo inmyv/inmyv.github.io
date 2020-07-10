@@ -6,7 +6,7 @@
         {% endif %}
     
         {% if paginator.page == 2 %}
-            <a href="/">后翻→</a>
+            <a href="/">←前翻</a>
             {% if paginator.page < paginator.total_pages %}
                 | <a href="{{ site.url }}/page{{ paginator.next_page }}/">后翻→</a>
             {% endif %}

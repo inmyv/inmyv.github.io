@@ -1,11 +1,9 @@
 ---
 layout: post
-categories: posts
-title: 图片发布
-subtitle: 这是图片文章的简述。
-tags: 样本帖子
+title: Markdown 插入图片的文章
+subtitle: 发布一篇带有图片的文章。
+tags: Markdown 主题 插入图片
 featured-image: https://s1.ax1x.com/2020/07/10/UK6kut.jpg
-date-string: 2020年07月10日
 ---
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="_/js/libs/jquery-1.9.1.min.js"><\/script>')</script>
@@ -25,25 +23,3 @@ date-string: 2020年07月10日
 
 
 氢气在我的足球比赛中很柔和，并且向电网投资，表现出狙击手的质感。 Quis quis，sollicitudin eu，金额以及金额，但是，当然，伟大的规定placerat tincidunt sed的生活，没有，秘密的书呆子。 有人说，那是利比里奥·迪奥·鲁特鲁姆酒，阴谋，山谷，甚至是无法确定目标的，也不是对门廊的恐惧。 初学者维斯丁奇劳特·劳雷特·利比罗·多洛尔（dapibus amet amet vulputate），那是巧克力，但是生活，根本没有任何东西，还有生态的日常生活。 最大的汽油或箭头设置环境，房屋，笔记本电脑，可悲的卡车或放置类房地产。 足球并不好，大惊小怪。
-
-<script src="/assets/js/jquery.photoset-grid.js"></script>
-
-<script type="text/javascript">
-    $('.photoset-grid-custom').photosetGrid({
-    // Set the gutter between columns and rows
-    gutter: '5px',
-  
-    // Wrap the images in links
-    highresLinks: true,
-  
-    // Asign a common rel attribute
-    rel: 'print-gallery',
-
-    onInit: function(){},
-    
-    onComplete: function(){
-        // Show the grid after it renders
-        $('.photoset-grid-custom').attr('style', '');
-    }
-});
-</script>

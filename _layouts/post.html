@@ -7,12 +7,6 @@
 <head>
     {% include head.html %}
 
-    <!-- 标题图片 -->
-    <!-- <center>
-        <span class="main-header-image">
-            <a href="/"><img src="图片地址"></a>
-        </span>
-    </center> -->
     <br>
     <center>
         <span class="main-header-image">
@@ -60,7 +54,7 @@
             <div class="inline-tags">
                 <span>
                     {% for tag in page.tags %}
-                        <a href="/pages/tags#{{tag}}">#{{ tag }}&nbsp;&nbsp;&nbsp;</a>
+                        <a href="/pages/tags#{{tag}}"><span class="fa fa-tags"></span>&nbsp;{{ tag }}&nbsp;&nbsp;&nbsp;</a>
                     {% endfor %}
                 </span>
             </div>
@@ -69,7 +63,7 @@
 
             <!-- 编辑日期 -->
             <div class="post-date">
-                {{ page.date-string }}
+                <a href="#top" target="_self">返回顶部</a>
             </div>
         </article>
     </div>
