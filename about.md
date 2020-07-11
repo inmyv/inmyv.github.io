@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 主题
-featured-image: https://s1.ax1x.com/2020/07/10/UK6kut.jpg
+featured-image: ../assets/images/photo.png
 ---
 <p>
 这个主题在麻省理工开放源码软件许可证下是免费的。
