@@ -2,7 +2,7 @@
 layout: post
 title: Markdown 语法在主题内样式的所有内容
 subtitle: 这篇文章用来展示markdown在主题内的样式
-featured-image: https://s1.ax1x.com/2020/07/10/UK6kut.jpg
+featured-image: ../assets/images/sample.png
 tags: Markdown 主题
 ---
 以下是您需要为主题设置样式的所有内容。 检查源代码以查看段落中的许多嵌入式元素。

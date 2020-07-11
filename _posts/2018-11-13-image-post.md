@@ -3,7 +3,7 @@ layout: post
 title: Markdown 插入图片的文章
 subtitle: 发布一篇带有图片的文章。
 tags: Markdown 主题 插入图片
-featured-image: https://s1.ax1x.com/2020/07/10/UK6kut.jpg
+featured-image: ../assets/images/photo.png
 ---
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="_/js/libs/jquery-1.9.1.min.js"><\/script>')</script>
@@ -12,12 +12,12 @@ featured-image: https://s1.ax1x.com/2020/07/10/UK6kut.jpg
 
 <center>
     <div class="photoset-grid-custom" data-layout="213">
-        <img src="/images/2016-11-19/abstract-1.jpg">
-        <img src="/images/2016-11-19/abstract-2.jpg">
-        <img src="/images/2016-11-19/abstract-3.jpg">
-        <img src="/images/2016-11-19/abstract-4.jpg">
-        <img src="/images/2016-11-19/abstract-5.jpg">
-        <img src="/images/2016-11-19/abstract-6.jpg">
+        <img src="/assets/images/abstract-1.jpg">
+        <img src="/assets/images/abstract-2.jpg">
+        <img src="/assets/images/abstract-3.jpg">
+        <img src="/assets/images/abstract-4.jpg">
+        <img src="/assets/images/abstract-5.jpg">
+        <img src="/assets/images/abstract-6.jpg">
     </div>
 </center>
 
