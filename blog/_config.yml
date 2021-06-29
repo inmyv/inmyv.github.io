@@ -1,12 +1,12 @@
 # Site settings
 title: Blog - technology and science at TheReviewIndex
 description: "A blog for sharing thoughts on technology, science and insights at TheReviewIndex."
-url: "http://www.thereviewindex.github.io/blog"
+url: "https://www.artlee.cn/blog"
 ogimage: "img/default-ogimage.png"
 author:
   name: "The Review Index"
   email: "root@thereviewindex.com"
-  url: "https://thereviewindex.com"
+  url: "https://www.artlee.cn"
 
 
 # Build settings
