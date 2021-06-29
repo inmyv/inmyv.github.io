@@ -1,0 +1,1404 @@
+#---------------------------------------------------#
+## 上次更新于：2021-06-29 06:46:12
+#---------------------------------------------------#
+
+port: 7890
+socks-port: 7891
+redir-port: 7892
+allow-lan: false
+mode: rule
+log-level: silent
+external-controller: '127.0.0.1:9090'
+secret: ''
+proxies:
+  -
+    name: '🌏 v2|亚洲|C|混合负载|无敌主力'
+    type: ss
+    server: k3.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627f7569.office.com
+  -
+    name: '🌏 v2|亚洲|B|混合负载|万能主力'
+    type: ss
+    server: k2.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627f7564.office.com
+  -
+    name: '🌏 v2|亚洲|C|混合负载|视频主力'
+    type: ss
+    server: k3.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627776.office.com
+  -
+    name: '🌏 v2|亚洲|B|混合负载|低延主力'
+    type: ss
+    server: k2.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627976.office.com
+  -
+    name: '🌏 v2|亚洲|A|混合负载|外贸主力'
+    type: ss
+    server: k1.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627876.office.com
+  -
+    name: '🌏 v2|亚洲|D|混合负载|极速主力'
+    type: ss
+    server: k4.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7763.office.com
+  -
+    name: '🌏 v2|亚洲|E|混合负载|稳定主力'
+    type: ss
+    server: k5.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7169.office.com
+  -
+    name: '🇭🇰 v2|香港|A|16台负载'
+    type: ss
+    server: k1.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627f7568.office.com
+  -
+    name: '🇭🇰 v2|香港|B|22台负载'
+    type: ss
+    server: k2.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627f7565.office.com
+  -
+    name: '🇭🇰 v2|香港|C|18台负载'
+    type: ss
+    server: k3.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d273362777c.office.com
+  -
+    name: '🇭🇰 v2|香港|B|21台负载'
+    type: ss
+    server: k2.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d273362797d.office.com
+  -
+    name: '🇭🇰 v2|香港|D|15台负载'
+    type: ss
+    server: k4.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7760.office.com
+  -
+    name: '🇭🇰 v2|香港|E|14台负载'
+    type: ss
+    server: k5.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7168.office.com
+  -
+    name: '🇸🇬 v2|新加坡|C|12台负载'
+    type: ss
+    server: k3.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627773.office.com
+  -
+    name: '🇸🇬 v2|新加坡|C|11台负载'
+    type: ss
+    server: k3.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627771.office.com
+  -
+    name: '🇸🇬 v2|新加坡|B|10台负载'
+    type: ss
+    server: k2.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627971.office.com
+  -
+    name: '🇸🇬 v2|新加坡|A|9台负载'
+    type: ss
+    server: k1.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627871.office.com
+  -
+    name: '🇸🇬 v2|新加坡|D|7台负载'
+    type: ss
+    server: k4.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7566.office.com
+  -
+    name: '🇸🇬 v2|新加坡|E|5台负载'
+    type: ss
+    server: k5.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7167.office.com
+  -
+    name: '🇯🇵 v2|日本|C|12台负载'
+    type: ss
+    server: k3.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627770.office.com
+  -
+    name: '🇯🇵 v2|日本|B|11台负载'
+    type: ss
+    server: k2.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627970.office.com
+  -
+    name: '🇯🇵 v2|日本|A|10台负载'
+    type: ss
+    server: k1.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627870.office.com
+  -
+    name: '🇯🇵 v2|日本|B|6台负载'
+    type: ss
+    server: k2.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627f7563.office.com
+  -
+    name: '🇯🇵 v2|日本|D|4台负载'
+    type: ss
+    server: k4.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7668.office.com
+  -
+    name: '🇯🇵 v2|日本|E|5台负载'
+    type: ss
+    server: k5.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7166.office.com
+  -
+    name: '🇺🇲 v2|美国|A|7台负载'
+    type: ss
+    server: k1.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627f7d65.office.com
+  -
+    name: '🇺🇲 v2|美国|B|7台负载'
+    type: ss
+    server: k2.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627873.office.com
+  -
+    name: '🇺🇲 v2|美国|C|4台负载'
+    type: ss
+    server: k3.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627f7d66.office.com
+  -
+    name: '🇺🇲 v2|美国|D|5台负载'
+    type: ss
+    server: k4.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7661.office.com
+  -
+    name: '🇺🇲 v2|美国|E|4台负载'
+    type: ss
+    server: k5.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7165.office.com
+  -
+    name: '🇭🇰 v2|香港|A|8台负载|原生'
+    type: ss
+    server: k1.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627874.office.com
+  -
+    name: '🇭🇰 v2|香港|B|10台负载|原生'
+    type: ss
+    server: k2.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627974.office.com
+  -
+    name: '🇭🇰 v2|香港|C|13台负载|原生'
+    type: ss
+    server: k3.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627774.office.com
+  -
+    name: '🇭🇰 v2|香港|B|9台负载|原生'
+    type: ss
+    server: k2.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d273362797c.office.com
+  -
+    name: '🇭🇰 v2|香港|D|11台负载|原生'
+    type: ss
+    server: k4.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7562.office.com
+  -
+    name: '🇭🇰 v2|香港|E|10台负载|原生'
+    type: ss
+    server: k5.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7164.office.com
+  -
+    name: '🇨🇳 v2|台湾|A|6台负载|原生'
+    type: ss
+    server: k1.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627f7660.office.com
+  -
+    name: '🇨🇳 v2|台湾|B|5台负载|原生'
+    type: ss
+    server: k2.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627f7768.office.com
+  -
+    name: '🇨🇳 v2|台湾|D|3台负载|原生'
+    type: ss
+    server: k4.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7568.office.com
+  -
+    name: '🇨🇳 v2|台湾|E|5台负载|原生'
+    type: ss
+    server: k5.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7163.office.com
+  -
+    name: '🇸🇬 v2|新加坡|B|5台负载|原生'
+    type: ss
+    server: k2.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627f7c67.office.com
+  -
+    name: '🇸🇬 v2|新加坡|A|6台负载|原生'
+    type: ss
+    server: k1.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627f7c66.office.com
+  -
+    name: '🇸🇬 v2|新加坡|D|4台负载|原生'
+    type: ss
+    server: k4.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7565.office.com
+  -
+    name: '🇸🇬 v2|新加坡|E|6台负载|原生'
+    type: ss
+    server: k5.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7162.office.com
+  -
+    name: '🇺🇲 v2|美国|A|5台负载|原生'
+    type: ss
+    server: k1.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7462.office.com
+  -
+    name: '🇺🇲 v2|美国|B|4台负载|原生'
+    type: ss
+    server: k2.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7463.office.com
+  -
+    name: '🇺🇲 v2|美国|D|3台负载|原生'
+    type: ss
+    server: k4.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7660.office.com
+  -
+    name: '🇺🇲 v2|美国|E|4台负载|原生'
+    type: ss
+    server: k5.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7161.office.com
+  -
+    name: '🇺🇲 v2|美国|A|disney+|hbo|hulu专用'
+    type: ss
+    server: k1.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7261.office.com
+  -
+    name: '🇩🇪 v2|欧洲|A|3台负载'
+    type: ss
+    server: k1.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d273362787c.office.com
+  -
+    name: '🇩🇪 v2|欧洲|D|4台负载'
+    type: ss
+    server: k4.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7665.office.com
+  -
+    name: '🇩🇪 v2|欧洲|E|5台负载'
+    type: ss
+    server: k5.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7160.office.com
+  -
+    name: '🇦🇺 v2|澳洲|A|6台负载'
+    type: ss
+    server: k1.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627f7468.office.com
+  -
+    name: '🇦🇺 v2|澳洲|D|4台负载'
+    type: ss
+    server: k4.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7664.office.com
+  -
+    name: '🇦🇺 v2|澳洲|E|5台负载'
+    type: ss
+    server: k5.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7069.office.com
+  -
+    name: '🇰🇷 v2|韩国|A|4台负载'
+    type: ss
+    server: k1.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627f7469.office.com
+  -
+    name: '🇰🇷 v2|韩国|D|5台负载'
+    type: ss
+    server: k4.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7761.office.com
+  -
+    name: '🇰🇷 v2|韩国|E|6台负载'
+    type: ss
+    server: k5.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7068.office.com
+  -
+    name: '🇧🇷 v2|南美|A|5台负载'
+    type: ss
+    server: k1.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627f7560.office.com
+  -
+    name: '🇧🇷 v2|南美|D|3台负载'
+    type: ss
+    server: k4.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7662.office.com
+  -
+    name: '🇧🇷 v2|南美|E|4台负载'
+    type: ss
+    server: k5.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7067.office.com
+  -
+    name: '🇮🇳 v2|印度|A|5台负载'
+    type: ss
+    server: k1.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627f7d68.office.com
+  -
+    name: '🇮🇳 v2|印度|D|3台负载'
+    type: ss
+    server: k4.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7666.office.com
+  -
+    name: '🇮🇳 v2|印度|E|5台负载'
+    type: ss
+    server: k5.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7066.office.com
+  -
+    name: '🇷🇺 v2|俄罗斯|A|4台负载|测试'
+    type: ss
+    server: k1.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7460.office.com
+  -
+    name: '🇷🇺 v2|俄罗斯|D|5台负载|测试'
+    type: ss
+    server: k4.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7765.office.com
+  -
+    name: '🇷🇺 v2|俄罗斯|E|3台负载|测试'
+    type: ss
+    server: k5.2y7.top
+    port: '41322'
+    cipher: aes-128-gcm
+    password: 6fbd3d3f5dcc
+    udp: false
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: 61737a7262716d2733627c7065.office.com
+proxy-groups:
+  -
+    name: 🐸速蛙云
+    type: select
+    proxies:
+      - '🌏 v2|亚洲|C|混合负载|无敌主力'
+      - '🌏 v2|亚洲|B|混合负载|万能主力'
+      - '🌏 v2|亚洲|C|混合负载|视频主力'
+      - '🌏 v2|亚洲|B|混合负载|低延主力'
+      - '🌏 v2|亚洲|A|混合负载|外贸主力'
+      - '🌏 v2|亚洲|D|混合负载|极速主力'
+      - '🌏 v2|亚洲|E|混合负载|稳定主力'
+      - '🇭🇰 v2|香港|A|16台负载'
+      - '🇭🇰 v2|香港|B|22台负载'
+      - '🇭🇰 v2|香港|C|18台负载'
+      - '🇭🇰 v2|香港|B|21台负载'
+      - '🇭🇰 v2|香港|D|15台负载'
+      - '🇭🇰 v2|香港|E|14台负载'
+      - '🇸🇬 v2|新加坡|C|12台负载'
+      - '🇸🇬 v2|新加坡|C|11台负载'
+      - '🇸🇬 v2|新加坡|B|10台负载'
+      - '🇸🇬 v2|新加坡|A|9台负载'
+      - '🇸🇬 v2|新加坡|D|7台负载'
+      - '🇸🇬 v2|新加坡|E|5台负载'
+      - '🇯🇵 v2|日本|C|12台负载'
+      - '🇯🇵 v2|日本|B|11台负载'
+      - '🇯🇵 v2|日本|A|10台负载'
+      - '🇯🇵 v2|日本|B|6台负载'
+      - '🇯🇵 v2|日本|D|4台负载'
+      - '🇯🇵 v2|日本|E|5台负载'
+      - '🇺🇲 v2|美国|A|7台负载'
+      - '🇺🇲 v2|美国|B|7台负载'
+      - '🇺🇲 v2|美国|C|4台负载'
+      - '🇺🇲 v2|美国|D|5台负载'
+      - '🇺🇲 v2|美国|E|4台负载'
+      - '🇭🇰 v2|香港|A|8台负载|原生'
+      - '🇭🇰 v2|香港|B|10台负载|原生'
+      - '🇭🇰 v2|香港|C|13台负载|原生'
+      - '🇭🇰 v2|香港|B|9台负载|原生'
+      - '🇭🇰 v2|香港|D|11台负载|原生'
+      - '🇭🇰 v2|香港|E|10台负载|原生'
+      - '🇨🇳 v2|台湾|A|6台负载|原生'
+      - '🇨🇳 v2|台湾|B|5台负载|原生'
+      - '🇨🇳 v2|台湾|D|3台负载|原生'
+      - '🇨🇳 v2|台湾|E|5台负载|原生'
+      - '🇸🇬 v2|新加坡|B|5台负载|原生'
+      - '🇸🇬 v2|新加坡|A|6台负载|原生'
+      - '🇸🇬 v2|新加坡|D|4台负载|原生'
+      - '🇸🇬 v2|新加坡|E|6台负载|原生'
+      - '🇺🇲 v2|美国|A|5台负载|原生'
+      - '🇺🇲 v2|美国|B|4台负载|原生'
+      - '🇺🇲 v2|美国|D|3台负载|原生'
+      - '🇺🇲 v2|美国|E|4台负载|原生'
+      - '🇺🇲 v2|美国|A|disney+|hbo|hulu专用'
+      - '🇩🇪 v2|欧洲|A|3台负载'
+      - '🇩🇪 v2|欧洲|D|4台负载'
+      - '🇩🇪 v2|欧洲|E|5台负载'
+      - '🇦🇺 v2|澳洲|A|6台负载'
+      - '🇦🇺 v2|澳洲|D|4台负载'
+      - '🇦🇺 v2|澳洲|E|5台负载'
+      - '🇰🇷 v2|韩国|A|4台负载'
+      - '🇰🇷 v2|韩国|D|5台负载'
+      - '🇰🇷 v2|韩国|E|6台负载'
+      - '🇧🇷 v2|南美|A|5台负载'
+      - '🇧🇷 v2|南美|D|3台负载'
+      - '🇧🇷 v2|南美|E|4台负载'
+      - '🇮🇳 v2|印度|A|5台负载'
+      - '🇮🇳 v2|印度|D|3台负载'
+      - '🇮🇳 v2|印度|E|5台负载'
+      - '🇷🇺 v2|俄罗斯|A|4台负载|测试'
+      - '🇷🇺 v2|俄罗斯|D|5台负载|测试'
+      - '🇷🇺 v2|俄罗斯|E|3台负载|测试'
+
+
+rules:
+  # 自定义规则
+  ## 您可以在此处插入您补充的自定义规则（请注意保持缩进）
+
+  # Apple
+  - DOMAIN,safebrowsing.urlsec.qq.com,DIRECT # 如果您并不信任此服务提供商或防止其下载消耗过多带宽资源，可以进入 Safari 设置，关闭 Fraudulent Website Warning 功能，并使用 REJECT 策略。
+  - DOMAIN,safebrowsing.googleapis.com,DIRECT # 如果您并不信任此服务提供商或防止其下载消耗过多带宽资源，可以进入 Safari 设置，关闭 Fraudulent Website Warning 功能，并使用 REJECT 策略。
+  - DOMAIN,developer.apple.com,🐸速蛙云
+  - DOMAIN-SUFFIX,digicert.com,🐸速蛙云
+  - DOMAIN,ocsp.apple.com,🐸速蛙云
+  - DOMAIN,ocsp.comodoca.com,🐸速蛙云
+  - DOMAIN,ocsp.usertrust.com,🐸速蛙云
+  - DOMAIN,ocsp.sectigo.com,🐸速蛙云
+  - DOMAIN,ocsp.verisign.net,🐸速蛙云
+  - DOMAIN-SUFFIX,apple-dns.net,🐸速蛙云
+  - DOMAIN,testflight.apple.com,🐸速蛙云
+  - DOMAIN,sandbox.itunes.apple.com,🐸速蛙云
+  - DOMAIN,itunes.apple.com,🐸速蛙云
+  - DOMAIN-SUFFIX,apps.apple.com,🐸速蛙云
+  - DOMAIN-SUFFIX,blobstore.apple.com,🐸速蛙云
+  - DOMAIN,cvws.icloud-content.com,🐸速蛙云
+  - DOMAIN-SUFFIX,mzstatic.com,DIRECT
+  - DOMAIN-SUFFIX,itunes.apple.com,DIRECT
+  - DOMAIN-SUFFIX,icloud.com,DIRECT
+  - DOMAIN-SUFFIX,icloud-content.com,DIRECT
+  - DOMAIN-SUFFIX,me.com,DIRECT
+  - DOMAIN-SUFFIX,aaplimg.com,DIRECT
+  - DOMAIN-SUFFIX,cdn20.com,DIRECT
+  - DOMAIN-SUFFIX,cdn-apple.com,DIRECT
+  - DOMAIN-SUFFIX,akadns.net,DIRECT
+  - DOMAIN-SUFFIX,akamaiedge.net,DIRECT
+  - DOMAIN-SUFFIX,edgekey.net,DIRECT
+  - DOMAIN-SUFFIX,mwcloudcdn.com,DIRECT
+  - DOMAIN-SUFFIX,mwcname.com,DIRECT
+  - DOMAIN-SUFFIX,apple.com,DIRECT
+  - DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT
+  - DOMAIN-SUFFIX,apple-mapkit.com,DIRECT
+  # - DOMAIN,e.crashlytics.com,REJECT //注释此选项有助于大多数App开发者分析崩溃信息；如果您拒绝一切崩溃数据统计、搜集，请取消 # 注释。
+
+  # 国内网站
+  - DOMAIN-SUFFIX,cn,DIRECT
+  - DOMAIN-KEYWORD,-cn,DIRECT
+
+  - DOMAIN-SUFFIX,126.com,DIRECT
+  - DOMAIN-SUFFIX,126.net,DIRECT
+  - DOMAIN-SUFFIX,127.net,DIRECT
+  - DOMAIN-SUFFIX,163.com,DIRECT
+  - DOMAIN-SUFFIX,360buyimg.com,DIRECT
+  - DOMAIN-SUFFIX,36kr.com,DIRECT
+  - DOMAIN-SUFFIX,acfun.tv,DIRECT
+  - DOMAIN-SUFFIX,air-matters.com,DIRECT
+  - DOMAIN-SUFFIX,aixifan.com,DIRECT
+  - DOMAIN-KEYWORD,alicdn,DIRECT
+  - DOMAIN-KEYWORD,alipay,DIRECT
+  - DOMAIN-KEYWORD,taobao,DIRECT
+  - DOMAIN-SUFFIX,amap.com,DIRECT
+  - DOMAIN-SUFFIX,autonavi.com,DIRECT
+  - DOMAIN-KEYWORD,baidu,DIRECT
+  - DOMAIN-SUFFIX,bdimg.com,DIRECT
+  - DOMAIN-SUFFIX,bdstatic.com,DIRECT
+  - DOMAIN-SUFFIX,bilibili.com,DIRECT
+  - DOMAIN-SUFFIX,bilivideo.com,DIRECT
+  - DOMAIN-SUFFIX,caiyunapp.com,DIRECT
+  - DOMAIN-SUFFIX,clouddn.com,DIRECT
+  - DOMAIN-SUFFIX,cnbeta.com,DIRECT
+  - DOMAIN-SUFFIX,cnbetacdn.com,DIRECT
+  - DOMAIN-SUFFIX,cootekservice.com,DIRECT
+  - DOMAIN-SUFFIX,csdn.net,DIRECT
+  - DOMAIN-SUFFIX,ctrip.com,DIRECT
+  - DOMAIN-SUFFIX,dgtle.com,DIRECT
+  - DOMAIN-SUFFIX,dianping.com,DIRECT
+  - DOMAIN-SUFFIX,douban.com,DIRECT
+  - DOMAIN-SUFFIX,doubanio.com,DIRECT
+  - DOMAIN-SUFFIX,duokan.com,DIRECT
+  - DOMAIN-SUFFIX,easou.com,DIRECT
+  - DOMAIN-SUFFIX,ele.me,DIRECT
+  - DOMAIN-SUFFIX,feng.com,DIRECT
+  - DOMAIN-SUFFIX,fir.im,DIRECT
+  - DOMAIN-SUFFIX,frdic.com,DIRECT
+  - DOMAIN-SUFFIX,g-cores.com,DIRECT
+  - DOMAIN-SUFFIX,godic.net,DIRECT
+  - DOMAIN-SUFFIX,gtimg.com,DIRECT
+  - DOMAIN,cdn.hockeyapp.net,DIRECT
+  - DOMAIN-SUFFIX,hongxiu.com,DIRECT
+  - DOMAIN-SUFFIX,hxcdn.net,DIRECT
+  - DOMAIN-SUFFIX,iciba.com,DIRECT
+  - DOMAIN-SUFFIX,ifeng.com,DIRECT
+  - DOMAIN-SUFFIX,ifengimg.com,DIRECT
+  - DOMAIN-SUFFIX,ipip.net,DIRECT
+  - DOMAIN-SUFFIX,iqiyi.com,DIRECT
+  - DOMAIN-SUFFIX,jd.com,DIRECT
+  - DOMAIN-SUFFIX,jianshu.com,DIRECT
+  - DOMAIN-SUFFIX,knewone.com,DIRECT
+  - DOMAIN-SUFFIX,le.com,DIRECT
+  - DOMAIN-SUFFIX,lecloud.com,DIRECT
+  - DOMAIN-SUFFIX,lemicp.com,DIRECT
+  - DOMAIN-SUFFIX,licdn.com,DIRECT
+  - DOMAIN-SUFFIX,linkedin.com,DIRECT
+  - DOMAIN-SUFFIX,luoo.net,DIRECT
+  - DOMAIN-SUFFIX,meituan.com,DIRECT
+  - DOMAIN-SUFFIX,meituan.net,DIRECT
+  - DOMAIN-SUFFIX,mi.com,DIRECT
+  - DOMAIN-SUFFIX,miaopai.com,DIRECT
+  - DOMAIN-SUFFIX,microsoft.com,DIRECT
+  - DOMAIN-SUFFIX,microsoftonline.com,DIRECT
+  - DOMAIN-SUFFIX,miui.com,DIRECT
+  - DOMAIN-SUFFIX,miwifi.com,DIRECT
+  - DOMAIN-SUFFIX,mob.com,DIRECT
+  - DOMAIN-SUFFIX,netease.com,DIRECT
+  - DOMAIN-SUFFIX,office.com,DIRECT
+  - DOMAIN-SUFFIX,office365.com,DIRECT
+  - DOMAIN-KEYWORD,officecdn,DIRECT
+  - DOMAIN-SUFFIX,oschina.net,DIRECT
+  - DOMAIN-SUFFIX,ppsimg.com,DIRECT
+  - DOMAIN-SUFFIX,pstatp.com,DIRECT
+  - DOMAIN-SUFFIX,qcloud.com,DIRECT
+  - DOMAIN-SUFFIX,qdaily.com,DIRECT
+  - DOMAIN-SUFFIX,qdmm.com,DIRECT
+  - DOMAIN-SUFFIX,qhimg.com,DIRECT
+  - DOMAIN-SUFFIX,qhres.com,DIRECT
+  - DOMAIN-SUFFIX,qidian.com,DIRECT
+  - DOMAIN-SUFFIX,qihucdn.com,DIRECT
+  - DOMAIN-SUFFIX,qiniu.com,DIRECT
+  - DOMAIN-SUFFIX,qiniucdn.com,DIRECT
+  - DOMAIN-SUFFIX,qiyipic.com,DIRECT
+  - DOMAIN-SUFFIX,qq.com,DIRECT
+  - DOMAIN-SUFFIX,qqurl.com,DIRECT
+  - DOMAIN-SUFFIX,rarbg.to,DIRECT
+  - DOMAIN-SUFFIX,ruguoapp.com,DIRECT
+  - DOMAIN-SUFFIX,segmentfault.com,DIRECT
+  - DOMAIN-SUFFIX,sinaapp.com,DIRECT
+  - DOMAIN-SUFFIX,smzdm.com,DIRECT
+  - DOMAIN-SUFFIX,snapdrop.net,DIRECT
+  - DOMAIN-SUFFIX,sogou.com,DIRECT
+  - DOMAIN-SUFFIX,sogoucdn.com,DIRECT
+  - DOMAIN-SUFFIX,sohu.com,DIRECT
+  - DOMAIN-SUFFIX,soku.com,DIRECT
+  - DOMAIN-SUFFIX,speedtest.net,DIRECT
+  - DOMAIN-SUFFIX,sspai.com,DIRECT
+  - DOMAIN-SUFFIX,suning.com,DIRECT
+  - DOMAIN-SUFFIX,taobao.com,DIRECT
+  - DOMAIN-SUFFIX,tencent.com,DIRECT
+  - DOMAIN-SUFFIX,tenpay.com,DIRECT
+  - DOMAIN-SUFFIX,tianyancha.com,DIRECT
+  - DOMAIN-SUFFIX,tmall.com,DIRECT
+  - DOMAIN-SUFFIX,tudou.com,DIRECT
+  - DOMAIN-SUFFIX,umetrip.com,DIRECT
+  - DOMAIN-SUFFIX,upaiyun.com,DIRECT
+  - DOMAIN-SUFFIX,upyun.com,DIRECT
+  - DOMAIN-SUFFIX,veryzhun.com,DIRECT
+  - DOMAIN-SUFFIX,weather.com,DIRECT
+  - DOMAIN-SUFFIX,weibo.com,DIRECT
+  - DOMAIN-SUFFIX,xiami.com,DIRECT
+  - DOMAIN-SUFFIX,xiami.net,DIRECT
+  - DOMAIN-SUFFIX,xiaomicp.com,DIRECT
+  - DOMAIN-SUFFIX,ximalaya.com,DIRECT
+  - DOMAIN-SUFFIX,xmcdn.com,DIRECT
+  - DOMAIN-SUFFIX,xunlei.com,DIRECT
+  - DOMAIN-SUFFIX,yhd.com,DIRECT
+  - DOMAIN-SUFFIX,yihaodianimg.com,DIRECT
+  - DOMAIN-SUFFIX,yinxiang.com,DIRECT
+  - DOMAIN-SUFFIX,ykimg.com,DIRECT
+  - DOMAIN-SUFFIX,youdao.com,DIRECT
+  - DOMAIN-SUFFIX,youku.com,DIRECT
+  - DOMAIN-SUFFIX,zealer.com,DIRECT
+  - DOMAIN-SUFFIX,zhihu.com,DIRECT
+  - DOMAIN-SUFFIX,zhimg.com,DIRECT
+  - DOMAIN-SUFFIX,zimuzu.tv,DIRECT
+  - DOMAIN-SUFFIX,zoho.com,DIRECT
+
+  # 抗 DNS 污染
+  - DOMAIN-KEYWORD,amazon,🐸速蛙云
+  - DOMAIN-KEYWORD,google,🐸速蛙云
+  - DOMAIN-KEYWORD,gmail,🐸速蛙云
+  - DOMAIN-KEYWORD,youtube,🐸速蛙云
+  - DOMAIN-KEYWORD,facebook,🐸速蛙云
+  - DOMAIN-SUFFIX,fb.me,🐸速蛙云
+  - DOMAIN-SUFFIX,fbcdn.net,🐸速蛙云
+  - DOMAIN-KEYWORD,twitter,🐸速蛙云
+  - DOMAIN-KEYWORD,instagram,🐸速蛙云
+  - DOMAIN-KEYWORD,dropbox,🐸速蛙云
+  - DOMAIN-SUFFIX,twimg.com,🐸速蛙云
+  - DOMAIN-KEYWORD,blogspot,🐸速蛙云
+  - DOMAIN-SUFFIX,youtu.be,🐸速蛙云
+  - DOMAIN-KEYWORD,whatsapp,🐸速蛙云
+
+  # 常见广告域名屏蔽
+  - DOMAIN-KEYWORD,admarvel,REJECT
+  - DOMAIN-KEYWORD,admaster,REJECT
+  - DOMAIN-KEYWORD,adsage,REJECT
+  - DOMAIN-KEYWORD,adsmogo,REJECT
+  - DOMAIN-KEYWORD,adsrvmedia,REJECT
+  - DOMAIN-KEYWORD,adwords,REJECT
+  - DOMAIN-KEYWORD,adservice,REJECT
+  - DOMAIN-SUFFIX,appsflyer.com,REJECT
+  - DOMAIN-KEYWORD,domob,REJECT
+  - DOMAIN-SUFFIX,doubleclick.net,REJECT
+  - DOMAIN-KEYWORD,duomeng,REJECT
+  - DOMAIN-KEYWORD,dwtrack,REJECT
+  - DOMAIN-KEYWORD,guanggao,REJECT
+  - DOMAIN-KEYWORD,lianmeng,REJECT
+  - DOMAIN-SUFFIX,mmstat.com,REJECT
+  - DOMAIN-KEYWORD,mopub,REJECT
+  - DOMAIN-KEYWORD,omgmta,REJECT
+  - DOMAIN-KEYWORD,openx,REJECT
+  - DOMAIN-KEYWORD,partnerad,REJECT
+  - DOMAIN-KEYWORD,pingfore,REJECT
+  - DOMAIN-KEYWORD,supersonicads,REJECT
+  - DOMAIN-KEYWORD,uedas,REJECT
+  - DOMAIN-KEYWORD,umeng,REJECT
+  - DOMAIN-KEYWORD,usage,REJECT
+  - DOMAIN-SUFFIX,vungle.com,REJECT
+  - DOMAIN-KEYWORD,wlmonitor,REJECT
+  - DOMAIN-KEYWORD,zjtoolbar,REJECT
+
+  # 国外网站
+  - DOMAIN-SUFFIX,9to5mac.com,🐸速蛙云
+  - DOMAIN-SUFFIX,abpchina.org,🐸速蛙云
+  - DOMAIN-SUFFIX,adblockplus.org,🐸速蛙云
+  - DOMAIN-SUFFIX,adobe.com,🐸速蛙云
+  - DOMAIN-SUFFIX,akamaized.net,🐸速蛙云
+  - DOMAIN-SUFFIX,alfredapp.com,🐸速蛙云
+  - DOMAIN-SUFFIX,amplitude.com,🐸速蛙云
+  - DOMAIN-SUFFIX,ampproject.org,🐸速蛙云
+  - DOMAIN-SUFFIX,android.com,🐸速蛙云
+  - DOMAIN-SUFFIX,angularjs.org,🐸速蛙云
+  - DOMAIN-SUFFIX,aolcdn.com,🐸速蛙云
+  - DOMAIN-SUFFIX,apkpure.com,🐸速蛙云
+  - DOMAIN-SUFFIX,appledaily.com,🐸速蛙云
+  - DOMAIN-SUFFIX,appshopper.com,🐸速蛙云
+  - DOMAIN-SUFFIX,appspot.com,🐸速蛙云
+  - DOMAIN-SUFFIX,arcgis.com,🐸速蛙云
+  - DOMAIN-SUFFIX,archive.org,🐸速蛙云
+  - DOMAIN-SUFFIX,armorgames.com,🐸速蛙云
+  - DOMAIN-SUFFIX,aspnetcdn.com,🐸速蛙云
+  - DOMAIN-SUFFIX,att.com,🐸速蛙云
+  - DOMAIN-SUFFIX,awsstatic.com,🐸速蛙云
+  - DOMAIN-SUFFIX,azureedge.net,🐸速蛙云
+  - DOMAIN-SUFFIX,azurewebsites.net,🐸速蛙云
+  - DOMAIN-SUFFIX,bing.com,🐸速蛙云
+  - DOMAIN-SUFFIX,bintray.com,🐸速蛙云
+  - DOMAIN-SUFFIX,bit.com,🐸速蛙云
+  - DOMAIN-SUFFIX,bit.ly,🐸速蛙云
+  - DOMAIN-SUFFIX,bitbucket.org,🐸速蛙云
+  - DOMAIN-SUFFIX,bjango.com,🐸速蛙云
+  - DOMAIN-SUFFIX,bkrtx.com,🐸速蛙云
+  - DOMAIN-SUFFIX,blog.com,🐸速蛙云
+  - DOMAIN-SUFFIX,blogcdn.com,🐸速蛙云
+  - DOMAIN-SUFFIX,blogger.com,🐸速蛙云
+  - DOMAIN-SUFFIX,blogsmithmedia.com,🐸速蛙云
+  - DOMAIN-SUFFIX,blogspot.com,🐸速蛙云
+  - DOMAIN-SUFFIX,blogspot.hk,🐸速蛙云
+  - DOMAIN-SUFFIX,bloomberg.com,🐸速蛙云
+  - DOMAIN-SUFFIX,box.com,🐸速蛙云
+  - DOMAIN-SUFFIX,box.net,🐸速蛙云
+  - DOMAIN-SUFFIX,cachefly.net,🐸速蛙云
+  - DOMAIN-SUFFIX,chromium.org,🐸速蛙云
+  - DOMAIN-SUFFIX,cl.ly,🐸速蛙云
+  - DOMAIN-SUFFIX,cloudflare.com,🐸速蛙云
+  - DOMAIN-SUFFIX,cloudfront.net,🐸速蛙云
+  - DOMAIN-SUFFIX,cloudmagic.com,🐸速蛙云
+  - DOMAIN-SUFFIX,cmail19.com,🐸速蛙云
+  - DOMAIN-SUFFIX,cnet.com,🐸速蛙云
+  - DOMAIN-SUFFIX,cocoapods.org,🐸速蛙云
+  - DOMAIN-SUFFIX,comodoca.com,🐸速蛙云
+  - DOMAIN-SUFFIX,crashlytics.com,🐸速蛙云
+  - DOMAIN-SUFFIX,culturedcode.com,🐸速蛙云
+  - DOMAIN-SUFFIX,d.pr,🐸速蛙云
+  - DOMAIN-SUFFIX,danilo.to,🐸速蛙云
+  - DOMAIN-SUFFIX,dayone.me,🐸速蛙云
+  - DOMAIN-SUFFIX,db.tt,🐸速蛙云
+  - DOMAIN-SUFFIX,deskconnect.com,🐸速蛙云
+  - DOMAIN-SUFFIX,disq.us,🐸速蛙云
+  - DOMAIN-SUFFIX,disqus.com,🐸速蛙云
+  - DOMAIN-SUFFIX,disquscdn.com,🐸速蛙云
+  - DOMAIN-SUFFIX,dnsimple.com,🐸速蛙云
+  - DOMAIN-SUFFIX,docker.com,🐸速蛙云
+  - DOMAIN-SUFFIX,dribbble.com,🐸速蛙云
+  - DOMAIN-SUFFIX,droplr.com,🐸速蛙云
+  - DOMAIN-SUFFIX,duckduckgo.com,🐸速蛙云
+  - DOMAIN-SUFFIX,dueapp.com,🐸速蛙云
+  - DOMAIN-SUFFIX,dytt8.net,🐸速蛙云
+  - DOMAIN-SUFFIX,edgecastcdn.net,🐸速蛙云
+  - DOMAIN-SUFFIX,edgekey.net,🐸速蛙云
+  - DOMAIN-SUFFIX,edgesuite.net,🐸速蛙云
+  - DOMAIN-SUFFIX,engadget.com,🐸速蛙云
+  - DOMAIN-SUFFIX,entrust.net,🐸速蛙云
+  - DOMAIN-SUFFIX,eurekavpt.com,🐸速蛙云
+  - DOMAIN-SUFFIX,evernote.com,🐸速蛙云
+  - DOMAIN-SUFFIX,fabric.io,🐸速蛙云
+  - DOMAIN-SUFFIX,fast.com,🐸速蛙云
+  - DOMAIN-SUFFIX,fastly.net,🐸速蛙云
+  - DOMAIN-SUFFIX,fc2.com,🐸速蛙云
+  - DOMAIN-SUFFIX,feedburner.com,🐸速蛙云
+  - DOMAIN-SUFFIX,feedly.com,🐸速蛙云
+  - DOMAIN-SUFFIX,feedsportal.com,🐸速蛙云
+  - DOMAIN-SUFFIX,fiftythree.com,🐸速蛙云
+  - DOMAIN-SUFFIX,firebaseio.com,🐸速蛙云
+  - DOMAIN-SUFFIX,flexibits.com,🐸速蛙云
+  - DOMAIN-SUFFIX,flickr.com,🐸速蛙云
+  - DOMAIN-SUFFIX,flipboard.com,🐸速蛙云
+  - DOMAIN-SUFFIX,g.co,🐸速蛙云
+  - DOMAIN-SUFFIX,gabia.net,🐸速蛙云
+  - DOMAIN-SUFFIX,geni.us,🐸速蛙云
+  - DOMAIN-SUFFIX,gfx.ms,🐸速蛙云
+  - DOMAIN-SUFFIX,ggpht.com,🐸速蛙云
+  - DOMAIN-SUFFIX,ghostnoteapp.com,🐸速蛙云
+  - DOMAIN-SUFFIX,git.io,🐸速蛙云
+  - DOMAIN-KEYWORD,github,🐸速蛙云
+  - DOMAIN-SUFFIX,globalsign.com,🐸速蛙云
+  - DOMAIN-SUFFIX,gmodules.com,🐸速蛙云
+  - DOMAIN-SUFFIX,godaddy.com,🐸速蛙云
+  - DOMAIN-SUFFIX,golang.org,🐸速蛙云
+  - DOMAIN-SUFFIX,gongm.in,🐸速蛙云
+  - DOMAIN-SUFFIX,goo.gl,🐸速蛙云
+  - DOMAIN-SUFFIX,goodreaders.com,🐸速蛙云
+  - DOMAIN-SUFFIX,goodreads.com,🐸速蛙云
+  - DOMAIN-SUFFIX,gravatar.com,🐸速蛙云
+  - DOMAIN-SUFFIX,gstatic.com,🐸速蛙云
+  - DOMAIN-SUFFIX,gvt0.com,🐸速蛙云
+  - DOMAIN-SUFFIX,hockeyapp.net,🐸速蛙云
+  - DOMAIN-SUFFIX,hotmail.com,🐸速蛙云
+  - DOMAIN-SUFFIX,icons8.com,🐸速蛙云
+  - DOMAIN-SUFFIX,ifixit.com,🐸速蛙云
+  - DOMAIN-SUFFIX,ift.tt,🐸速蛙云
+  - DOMAIN-SUFFIX,ifttt.com,🐸速蛙云
+  - DOMAIN-SUFFIX,iherb.com,🐸速蛙云
+  - DOMAIN-SUFFIX,imageshack.us,🐸速蛙云
+  - DOMAIN-SUFFIX,img.ly,🐸速蛙云
+  - DOMAIN-SUFFIX,imgur.com,🐸速蛙云
+  - DOMAIN-SUFFIX,imore.com,🐸速蛙云
+  - DOMAIN-SUFFIX,instapaper.com,🐸速蛙云
+  - DOMAIN-SUFFIX,ipn.li,🐸速蛙云
+  - DOMAIN-SUFFIX,is.gd,🐸速蛙云
+  - DOMAIN-SUFFIX,issuu.com,🐸速蛙云
+  - DOMAIN-SUFFIX,itgonglun.com,🐸速蛙云
+  - DOMAIN-SUFFIX,itun.es,🐸速蛙云
+  - DOMAIN-SUFFIX,ixquick.com,🐸速蛙云
+  - DOMAIN-SUFFIX,j.mp,🐸速蛙云
+  - DOMAIN-SUFFIX,js.revsci.net,🐸速蛙云
+  - DOMAIN-SUFFIX,jshint.com,🐸速蛙云
+  - DOMAIN-SUFFIX,jtvnw.net,🐸速蛙云
+  - DOMAIN-SUFFIX,justgetflux.com,🐸速蛙云
+  - DOMAIN-SUFFIX,kat.cr,🐸速蛙云
+  - DOMAIN-SUFFIX,klip.me,🐸速蛙云
+  - DOMAIN-SUFFIX,libsyn.com,🐸速蛙云
+  - DOMAIN-SUFFIX,linode.com,🐸速蛙云
+  - DOMAIN-SUFFIX,lithium.com,🐸速蛙云
+  - DOMAIN-SUFFIX,littlehj.com,🐸速蛙云
+  - DOMAIN-SUFFIX,live.com,🐸速蛙云
+  - DOMAIN-SUFFIX,live.net,🐸速蛙云
+  - DOMAIN-SUFFIX,livefilestore.com,🐸速蛙云
+  - DOMAIN-SUFFIX,llnwd.net,🐸速蛙云
+  - DOMAIN-SUFFIX,macid.co,🐸速蛙云
+  - DOMAIN-SUFFIX,macromedia.com,🐸速蛙云
+  - DOMAIN-SUFFIX,macrumors.com,🐸速蛙云
+  - DOMAIN-SUFFIX,mashable.com,🐸速蛙云
+  - DOMAIN-SUFFIX,mathjax.org,🐸速蛙云
+  - DOMAIN-SUFFIX,medium.com,🐸速蛙云
+  - DOMAIN-SUFFIX,mega.co.nz,🐸速蛙云
+  - DOMAIN-SUFFIX,mega.nz,🐸速蛙云
+  - DOMAIN-SUFFIX,megaupload.com,🐸速蛙云
+  - DOMAIN-SUFFIX,microsofttranslator.com,🐸速蛙云
+  - DOMAIN-SUFFIX,mindnode.com,🐸速蛙云
+  - DOMAIN-SUFFIX,mobile01.com,🐸速蛙云
+  - DOMAIN-SUFFIX,modmyi.com,🐸速蛙云
+  - DOMAIN-SUFFIX,msedge.net,🐸速蛙云
+  - DOMAIN-SUFFIX,myfontastic.com,🐸速蛙云
+  - DOMAIN-SUFFIX,name.com,🐸速蛙云
+  - DOMAIN-SUFFIX,nextmedia.com,🐸速蛙云
+  - DOMAIN-SUFFIX,nsstatic.net,🐸速蛙云
+  - DOMAIN-SUFFIX,nssurge.com,🐸速蛙云
+  - DOMAIN-SUFFIX,nyt.com,🐸速蛙云
+  - DOMAIN-SUFFIX,nytimes.com,🐸速蛙云
+  - DOMAIN-SUFFIX,omnigroup.com,🐸速蛙云
+  - DOMAIN-SUFFIX,onedrive.com,🐸速蛙云
+  - DOMAIN-SUFFIX,onenote.com,🐸速蛙云
+  - DOMAIN-SUFFIX,ooyala.com,🐸速蛙云
+  - DOMAIN-SUFFIX,openvpn.net,🐸速蛙云
+  - DOMAIN-SUFFIX,openwrt.org,🐸速蛙云
+  - DOMAIN-SUFFIX,orkut.com,🐸速蛙云
+  - DOMAIN-SUFFIX,osxdaily.com,🐸速蛙云
+  - DOMAIN-SUFFIX,outlook.com,🐸速蛙云
+  - DOMAIN-SUFFIX,ow.ly,🐸速蛙云
+  - DOMAIN-SUFFIX,paddleapi.com,🐸速蛙云
+  - DOMAIN-SUFFIX,parallels.com,🐸速蛙云
+  - DOMAIN-SUFFIX,parse.com,🐸速蛙云
+  - DOMAIN-SUFFIX,pdfexpert.com,🐸速蛙云
+  - DOMAIN-SUFFIX,periscope.tv,🐸速蛙云
+  - DOMAIN-SUFFIX,pinboard.in,🐸速蛙云
+  - DOMAIN-SUFFIX,pinterest.com,🐸速蛙云
+  - DOMAIN-SUFFIX,pixelmator.com,🐸速蛙云
+  - DOMAIN-SUFFIX,pixiv.net,🐸速蛙云
+  - DOMAIN-SUFFIX,playpcesor.com,🐸速蛙云
+  - DOMAIN-SUFFIX,playstation.com,🐸速蛙云
+  - DOMAIN-SUFFIX,playstation.com.hk,🐸速蛙云
+  - DOMAIN-SUFFIX,playstation.net,🐸速蛙云
+  - DOMAIN-SUFFIX,playstationnetwork.com,🐸速蛙云
+  - DOMAIN-SUFFIX,pushwoosh.com,🐸速蛙云
+  - DOMAIN-SUFFIX,rime.im,🐸速蛙云
+  - DOMAIN-SUFFIX,servebom.com,🐸速蛙云
+  - DOMAIN-SUFFIX,sfx.ms,🐸速蛙云
+  - DOMAIN-SUFFIX,shadowsocks.org,🐸速蛙云
+  - DOMAIN-SUFFIX,sharethis.com,🐸速蛙云
+  - DOMAIN-SUFFIX,shazam.com,🐸速蛙云
+  - DOMAIN-SUFFIX,skype.com,🐸速蛙云
+  - DOMAIN-SUFFIX,smartdns🐸速蛙云.com,🐸速蛙云
+  - DOMAIN-SUFFIX,smartmailcloud.com,🐸速蛙云
+  - DOMAIN-SUFFIX,sndcdn.com,🐸速蛙云
+  - DOMAIN-SUFFIX,sony.com,🐸速蛙云
+  - DOMAIN-SUFFIX,soundcloud.com,🐸速蛙云
+  - DOMAIN-SUFFIX,sourceforge.net,🐸速蛙云
+  - DOMAIN-SUFFIX,spotify.com,🐸速蛙云
+  - DOMAIN-SUFFIX,squarespace.com,🐸速蛙云
+  - DOMAIN-SUFFIX,sstatic.net,🐸速蛙云
+  - DOMAIN-SUFFIX,st.luluku.pw,🐸速蛙云
+  - DOMAIN-SUFFIX,stackoverflow.com,🐸速蛙云
+  - DOMAIN-SUFFIX,startpage.com,🐸速蛙云
+  - DOMAIN-SUFFIX,staticflickr.com,🐸速蛙云
+  - DOMAIN-SUFFIX,steamcommunity.com,🐸速蛙云
+  - DOMAIN-SUFFIX,symauth.com,🐸速蛙云
+  - DOMAIN-SUFFIX,symcb.com,🐸速蛙云
+  - DOMAIN-SUFFIX,symcd.com,🐸速蛙云
+  - DOMAIN-SUFFIX,tapbots.com,🐸速蛙云
+  - DOMAIN-SUFFIX,tapbots.net,🐸速蛙云
+  - DOMAIN-SUFFIX,tdesktop.com,🐸速蛙云
+  - DOMAIN-SUFFIX,techcrunch.com,🐸速蛙云
+  - DOMAIN-SUFFIX,techsmith.com,🐸速蛙云
+  - DOMAIN-SUFFIX,thepiratebay.org,🐸速蛙云
+  - DOMAIN-SUFFIX,theverge.com,🐸速蛙云
+  - DOMAIN-SUFFIX,time.com,🐸速蛙云
+  - DOMAIN-SUFFIX,timeinc.net,🐸速蛙云
+  - DOMAIN-SUFFIX,tiny.cc,🐸速蛙云
+  - DOMAIN-SUFFIX,tinypic.com,🐸速蛙云
+  - DOMAIN-SUFFIX,tmblr.co,🐸速蛙云
+  - DOMAIN-SUFFIX,todoist.com,🐸速蛙云
+  - DOMAIN-SUFFIX,trello.com,🐸速蛙云
+  - DOMAIN-SUFFIX,trustasiassl.com,🐸速蛙云
+  - DOMAIN-SUFFIX,tumblr.co,🐸速蛙云
+  - DOMAIN-SUFFIX,tumblr.com,🐸速蛙云
+  - DOMAIN-SUFFIX,tweetdeck.com,🐸速蛙云
+  - DOMAIN-SUFFIX,tweetmarker.net,🐸速蛙云
+  - DOMAIN-SUFFIX,twitch.tv,🐸速蛙云
+  - DOMAIN-SUFFIX,txmblr.com,🐸速蛙云
+  - DOMAIN-SUFFIX,typekit.net,🐸速蛙云
+  - DOMAIN-SUFFIX,ubertags.com,🐸速蛙云
+  - DOMAIN-SUFFIX,ublock.org,🐸速蛙云
+  - DOMAIN-SUFFIX,ubnt.com,🐸速蛙云
+  - DOMAIN-SUFFIX,ulyssesapp.com,🐸速蛙云
+  - DOMAIN-SUFFIX,urchin.com,🐸速蛙云
+  - DOMAIN-SUFFIX,usertrust.com,🐸速蛙云
+  - DOMAIN-SUFFIX,v.gd,🐸速蛙云
+  - DOMAIN-SUFFIX,v2ex.com,🐸速蛙云
+  - DOMAIN-SUFFIX,vimeo.com,🐸速蛙云
+  - DOMAIN-SUFFIX,vimeocdn.com,🐸速蛙云
+  - DOMAIN-SUFFIX,vine.co,🐸速蛙云
+  - DOMAIN-SUFFIX,vivaldi.com,🐸速蛙云
+  - DOMAIN-SUFFIX,vox-cdn.com,🐸速蛙云
+  - DOMAIN-SUFFIX,vsco.co,🐸速蛙云
+  - DOMAIN-SUFFIX,vultr.com,🐸速蛙云
+  - DOMAIN-SUFFIX,w.org,🐸速蛙云
+  - DOMAIN-SUFFIX,w3schools.com,🐸速蛙云
+  - DOMAIN-SUFFIX,webtype.com,🐸速蛙云
+  - DOMAIN-SUFFIX,wikiwand.com,🐸速蛙云
+  - DOMAIN-SUFFIX,wikileaks.org,🐸速蛙云
+  - DOMAIN-SUFFIX,wikimedia.org,🐸速蛙云
+  - DOMAIN-SUFFIX,wikipedia.com,🐸速蛙云
+  - DOMAIN-SUFFIX,wikipedia.org,🐸速蛙云
+  - DOMAIN-SUFFIX,windows.com,🐸速蛙云
+  - DOMAIN-SUFFIX,windows.net,🐸速蛙云
+  - DOMAIN-SUFFIX,wire.com,🐸速蛙云
+  - DOMAIN-SUFFIX,wordpress.com,🐸速蛙云
+  - DOMAIN-SUFFIX,workflowy.com,🐸速蛙云
+  - DOMAIN-SUFFIX,wp.com,🐸速蛙云
+  - DOMAIN-SUFFIX,wsj.com,🐸速蛙云
+  - DOMAIN-SUFFIX,wsj.net,🐸速蛙云
+  - DOMAIN-SUFFIX,xda-developers.com,🐸速蛙云
+  - DOMAIN-SUFFIX,xeeno.com,🐸速蛙云
+  - DOMAIN-SUFFIX,xiti.com,🐸速蛙云
+  - DOMAIN-SUFFIX,yahoo.com,🐸速蛙云
+  - DOMAIN-SUFFIX,yimg.com,🐸速蛙云
+  - DOMAIN-SUFFIX,ying.com,🐸速蛙云
+  - DOMAIN-SUFFIX,yoyo.org,🐸速蛙云
+  - DOMAIN-SUFFIX,ytimg.com,🐸速蛙云
+
+  # Telegram
+  - DOMAIN-SUFFIX,telegra.ph,🐸速蛙云
+  - DOMAIN-SUFFIX,telegram.org,🐸速蛙云
+  - IP-CIDR,91.108.4.0/22,🐸速蛙云
+  - IP-CIDR,91.108.8.0/21,🐸速蛙云
+  - IP-CIDR,91.108.16.0/22,🐸速蛙云
+  - IP-CIDR,91.108.56.0/22,🐸速蛙云
+  - IP-CIDR,149.154.160.0/20,🐸速蛙云
+  - IP-CIDR6,2001:67c:4e8::/48,🐸速蛙云
+  - IP-CIDR6,2001:b28:f23d::/48,🐸速蛙云
+  - IP-CIDR6,2001:b28:f23f::/48,🐸速蛙云
+
+  # LAN
+  - DOMAIN,injections.adguard.org,DIRECT
+  - DOMAIN,local.adguard.org,DIRECT
+  - DOMAIN-SUFFIX,local,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,17.0.0.0/8,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
+  - IP-CIDR,224.0.0.0/4,DIRECT
+  - IP-CIDR6,fe80::/10,DIRECT
+
+  # 最终规则
+  - GEOIP,CN,DIRECT
+  - MATCH,🐸速蛙云
