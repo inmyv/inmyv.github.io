@@ -1342,7 +1342,7 @@ proxy-groups:
     interval: "300"
 rules:
   - DOMAIN-KEYWORD,guiltygear,🎮 境外游戏
-  - DOMAIN-KEYWORD,capcomfighters,🎮 境外游戏
+  - DOMAIN-KEYWORD,capcom,🎮 境外游戏
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-loopback,🎯 全球直连
