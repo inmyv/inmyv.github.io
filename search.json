@@ -1,14 +1,51 @@
----
-layout: null
----
 [
-  {% for post in site.posts %}
+  
     {
-      "title"    : "{{ post.title | escape }}",
-      "category" : "{{ post.category }}",
-      "tags"     : "{{ post.tags | array_to_sentence_string }}",
-      "url"      : "{{ site.baseurl }}{{ post.url }}",
-      "date"     : "{{ post.date | date: "%-d %b, %Y" }}"
-    } {% unless forloop.last %},{% endunless %}
-  {% endfor %}
+      "title"    : "Find a connection with the reader",
+      "category" : "",
+      "tags"     : "资源, 博客, and 主题",
+      "url"      : "/post/find-a-connection-with-the-reader.php",
+      "date"     : "24 Jul, 2018"
+    } ,
+  
+    {
+      "title"    : "Why a brand is often important",
+      "category" : "",
+      "tags"     : "Style",
+      "url"      : "/post/why-a-brand-is-often-important.php",
+      "date"     : "19 Jul, 2018"
+    } ,
+  
+    {
+      "title"    : "Time to give gifts to everyone",
+      "category" : "",
+      "tags"     : "Life",
+      "url"      : "/post/time-to-givegifts-to-everyone.php",
+      "date"     : "17 Jul, 2018"
+    } ,
+  
+    {
+      "title"    : "Moving to a new place",
+      "category" : "",
+      "tags"     : "Home",
+      "url"      : "/post/moving-to-a-new-place.php",
+      "date"     : "5 Jul, 2018"
+    } ,
+  
+    {
+      "title"    : "Start the day with the right habit",
+      "category" : "",
+      "tags"     : "Style",
+      "url"      : "/post/start-the-day-with-the-right-habit.php",
+      "date"     : "25 Jun, 2018"
+    } ,
+  
+    {
+      "title"    : "Welcome to Jekyll!",
+      "category" : "",
+      "tags"     : "Jekyll",
+      "url"      : "/post/welcome-to-jekyll.php",
+      "date"     : "29 May, 2018"
+    } 
+  
 ]
