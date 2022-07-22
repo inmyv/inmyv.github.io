@@ -1,19 +1,25 @@
 ---
 layout: default
 ---
-<div class="home">
-	<section class="site-header">
-		<h1 class="smallcap"><a class="site-title" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">{{ site.title }}</a></h1>
-		{% include nav.html %}
-		{% include intro.html %}
-	</section>
-	<section>
-		<ul class="post-list">
-			{% for post in site.posts %}
-			<li>
-				<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
-			</li>
-			{% endfor %}
-		</ul>
-	</section>
+{% include hero.html %}
+
+<div class="container">
+	<div class="row">
+		<div class="col col-12">
+			{% if site.posts.size > 0 %}
+				<h4 class="lates-title">Latest Posts</h4>
+			{% endif %}
+		</div>
+	</div>
 </div>
+
+<div class="container">
+	<div class="row">
+	{% if site.posts.size > 0 %}
+		{% for post in paginator.posts %}
+			{% include article-content.html %}
+		{% endfor %}
+	{% endif %}
+	</div>
+</div>
+{% include pagination.html %}
