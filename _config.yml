@@ -1,0 +1,12 @@
+title: "Artlee.cn"
+description: "一切从一个点开始..."
+baseurl: "" 
+url: ""
+author: "Lee"
+
+kramdown:
+  input: GFM
+permalink: none
+
+plugins:
+  - jekyll-sitemap
