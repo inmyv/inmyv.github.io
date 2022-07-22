@@ -1,8 +1,8 @@
-title: "Artlee.cn"
+title: "inmyv.com"
 description: "一切从一个点开始..."
 baseurl: "" 
 url: ""
-author: "Lee"
+author: "V"
 
 kramdown:
   input: GFM
