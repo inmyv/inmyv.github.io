@@ -1,0 +1,233 @@
+mixed-port: 7890
+allow-lan: false
+external-controller: 127.0.0.1:58499
+secret: 3e21df24-5963-4e18-a7b0-19fab3bb0438
+
+
+# 策略组
+proxy-groups:
+
+  # 从链接导入的配置文件（支持多个Clash 订阅链接）
+  
+  - name: 🔁 负载均衡
+    type: load-balance
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    use:
+      # 引入proxy-provider（代理集分组名） 使用 use 关键字
+      - 🌍 筛选地区
+    proxies:
+
+  - name: 🔃 故障转移
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    use:
+      # 引入proxy-provider（代理集分组名） 使用 use 关键字
+      - 🌍 筛选地区
+    proxies:
+    
+  - name: 📶 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    use:
+      # 引入proxy-provider（代理集分组名） 使用 use 关键字
+      - 🌍 筛选地区
+    proxies:
+
+  - name: 🚀 选择节点
+    type: select
+    use:
+      # 引入proxy-provider（代理集分组名） 使用 use 关键字
+      - 🌍 筛选地区
+    proxies:
+
+  - name: 🎮 游戏专线
+    type: select
+    use:
+      # 引入proxy-provider（代理集分组名） 使用 use 关键字
+      - 🎮  游戏节点
+    proxies:
+      - DIRECT
+
+  - name: ♾ 名单模式
+    type: select
+    use:
+      # 引入proxy-provider（代理集分组名） 使用 use 关键字
+      - 🌍 筛选地区
+    proxies:
+      - DIRECT
+
+# 代理集
+proxy-providers:
+  
+  # 从链接导入的配置文件（支持多个Clash 订阅链接）
+
+  🌍 筛选地区:
+    # 在线更新类型： http 、本地文件类型：file  (确保本地配置文件的存在)
+      type: http 
+    # 配置文件所处路径
+      path: ./profiles/proxies/filter.yaml
+    # 在线更新地址
+      url: https://subgvav.faster.icu/link/WwtUSE2tbfwol82I?clash=2
+    # 配置文件更新间隔时间（单位：秒）
+      interval: 3600
+    # 筛选出含有该关键词的节点 多选可用 “|” 间隔（留空则加载全部节点）
+      filter: '香港' 
+    #示例： 香港|台湾|日本|韩国|新加坡|俄罗斯|印度|美国|澳大利亚|阿根廷|德国|巴西|英国|马来西亚|菲律宾|泰国|越南|南非|尼日利亚|加拿大|墨西哥|巴基斯坦|冰岛|荷兰|西班牙|瑞士|瑞典|爱尔兰|土耳其|意大利|法国|印度尼西亚|阿联酋|以色列|葡萄牙|立陶宛|匈牙利|乌克兰|罗马尼亚|智利|比利时|奥地利
+    # 节点监测功能
+      health-check:
+      # 开启true 关闭 false
+        enable: true
+        #节点监测的测试地址  
+        url: http://www.gstatic.com/generate_204
+        #监测间隔时间（单位：秒） 
+        interval: 300 
+
+  🎮  游戏节点:
+    # 在线更新类型： http 、本地文件类型：file  (确保本地配置文件的存在)
+      type: http 
+    # 配置文件所处路径
+      path: ./profiles/proxies/game.yaml
+    # 在线更新地址
+      url: https://suo.yt/evoSBe5
+    # 配置文件更新间隔时间（单位：秒）
+      interval: 3600
+    # 筛选出含有该关键词的节点 多选可用 “|” 间隔（留空则加载全部节点）
+      filter: '' 
+    #示例： 香港|台湾|日本|韩国|新加坡|俄罗斯|印度|美国|澳大利亚|阿根廷|德国|巴西|英国|马来西亚|菲律宾|泰国|越南|南非|尼日利亚|加拿大|墨西哥|巴基斯坦|冰岛|荷兰|西班牙|瑞士|瑞典|爱尔兰|土耳其|意大利|法国|印度尼西亚|阿联酋|以色列|葡萄牙|立陶宛|匈牙利|乌克兰|罗马尼亚|智利|比利时|奥地利
+    # 节点监测功能
+      health-check:
+      # 开启true 关闭 false
+        enable: true
+        #节点监测的测试地址  
+        url: http://www.gstatic.com/generate_204
+        #监测间隔时间（单位：秒） 
+        interval: 300 
+
+  🚀 全部节点:
+    # 在线更新类型： http 、本地文件类型：file  (确保本地配置文件的存在)
+      type: http 
+    # 配置文件所处路径
+      path: ./profiles/proxies/proxy.yaml
+    # 在线更新地址
+      url: https://subgvav.faster.icu/link/WwtUSE2tbfwol82I?clash=2
+    # 配置文件更新间隔时间（单位：秒）
+      interval: 3600
+    # 筛选出含有该关键词的节点 多选可用 “|” 间隔（留空则加载全部节点）
+      filter: '' 
+    #示例： 香港|台湾|日本|韩国|新加坡|俄罗斯|印度|美国|澳大利亚|阿根廷|德国|巴西|英国|马来西亚|菲律宾|泰国|越南|南非|尼日利亚|加拿大|墨西哥|巴基斯坦|冰岛|荷兰|西班牙|瑞士|瑞典|爱尔兰|土耳其|意大利|法国|印度尼西亚|阿联酋|以色列|葡萄牙|立陶宛|匈牙利|乌克兰|罗马尼亚|智利|比利时|奥地利
+    # 节点监测功能
+      health-check:
+      # 开启true 关闭 false
+        enable: true
+        #节点监测的测试地址  
+        url: http://www.gstatic.com/generate_204
+        #监测间隔时间（单位：秒） 
+        interval: 300 
+
+# 专业版支持 rule-providers
+rule-providers:
+  reject:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    path: ./profiles/ruleset/reject.yaml
+    interval: 86400
+  icloud:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt"
+    path: ./profiles/ruleset/icloud.yaml
+    interval: 86400
+  apple:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt"
+    path: ./profiles/ruleset/apple.yaml
+    interval: 86400
+  google:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"
+    path: ./profiles/ruleset/google.yaml
+    interval: 86400
+  proxy:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
+    path: ./profiles/ruleset/proxy.yaml
+    interval: 86400
+  direct:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
+    path: ./profiles/ruleset/direct.yaml
+    interval: 86400
+  private:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
+    path: ./profiles/ruleset/private.yaml
+    interval: 86400
+  gfw:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
+    path: ./profiles/ruleset/gfw.yaml
+    interval: 86400
+  greatfire:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/greatfire.txt"
+    path: ./profiles/ruleset/greatfire.yaml
+    interval: 86400
+  tld-not-cn:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
+    path: ./profiles/ruleset/tld-not-cn.yaml
+    interval: 86400
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
+    path: ./profiles/ruleset/telegramcidr.yaml
+    interval: 86400
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
+    path: ./profiles/ruleset/cncidr.yaml
+    interval: 86400
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
+    path: ./profiles/ruleset/lancidr.yaml
+    interval: 86400
+  games:
+    type: file
+    behavior: domain
+    url: ""
+    path: ./profiles/ruleset/games.yaml
+    interval: 86400
+
+# 规则记录
+rules:
+  - RULE-SET,private,DIRECT
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,reject,REJECT
+  - RULE-SET,icloud,DIRECT
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,google,DIRECT
+  - RULE-SET,games,🎮 游戏专线
+  - RULE-SET,proxy,🚀 选择节点
+  - RULE-SET,telegramcidr,🚀 选择节点
+  - GEOIP,,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,♾ 名单模式
