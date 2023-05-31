@@ -19,18 +19,18 @@ layout: default
 
 <section>
 
-  ## 【快捷菜单】
-  - [注册帐号]({{ site.baseurl }}/runewizard/) | [查询密码]({{ site.baseurl }}/runewizard/) | [修改密码]({{ site.baseurl }}/runewizard/) 
-  - **资源下载** : [阿里云盘](http://www.aliyun.com)|[百度网盘](http://pan.baidu.com)|[蓝奏云](http://www.lanzou.com)
+## 【快捷菜单】
+- [注册帐号]({{ site.baseurl }}/runewizard/) | [查询密码]({{ site.baseurl }}/runewizard/) | [修改密码]({{ site.baseurl }}/runewizard/) 
+- **资源下载** : [阿里云盘](http://www.aliyun.com)|[百度网盘](http://pan.baidu.com)|[蓝奏云](http://www.lanzou.com)
 
 </section>
 
 <section>
 
-  ## 【联系方式】
-  - 邮箱地址 : support@1000y.team
-  - 企鹅群：5125129
-  - 微信号：1000yTeam
+## 【联系方式】
+- 邮箱地址 : support@1000y.team
+- 企鹅群：5125129
+- 微信号：1000yTeam
   
 </section>
 
