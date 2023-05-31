@@ -1,19 +1,17 @@
-# Site Build Settings
+# Jekyll Configuration
+#source: 
+#destination: _site
+baseurl: /diablo2
 
-# jekyll-paginate configuration
-paginate:            5
+markdown: kramdown
 
-# Build settings
-markdown:            kramdown
-highlighter:         rouge
-permalink:           /:title
-plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
+permalink: /:title
 
-# Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
-title:		           "Artlee"
-description:	       "一切从一个点开始"
-author:              "Lee"
+exclude:
+- archive
+- code
+- LICENSE
+- README.md
 
-# RSS 2.0 can be used instead of Atom by uncommenting following two lines
-#feed:
-#  path: rss-feed.xml
+sass:
+  sass_dir: css
