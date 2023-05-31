@@ -19,7 +19,7 @@ layout: default
 
   ## 【快捷菜单】
   - [注册帐号]({{ site.baseurl }}/runewizard/) | [查询密码]({{ site.baseurl }}/runewizard/) | [修改密码]({{ site.baseurl }}/runewizard/) 
-  - **客户端及补丁** : https://www.aliyun.com
+  - **资源下载** : [阿里云盘](http://www.aliyun.com)|[百度网盘](http://pan.baidu.com)|[蓝奏云](http://www.lanzou.com)
 
   </section>
 
