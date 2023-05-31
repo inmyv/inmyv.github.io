@@ -24,7 +24,8 @@ layout: default
 
 <div style="margin:0 0 2rem;"></div> -->
 
-## 近期更新
+
+## 【即将更新】
 
 - [地图]({{ site.baseurl }}/runewizard/) 关于地图的更新内容
 - **客户端及补丁下载** : https://www.aliyun.com
@@ -32,7 +33,7 @@ layout: default
 </section>
 
 <section>
-## 联系方式
+## 【联系方式】
 - 邮箱地址 : support@1000y.team
 - 企鹅群：5125129
 - 微信号：1000yTeam
