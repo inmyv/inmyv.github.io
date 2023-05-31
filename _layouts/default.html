@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-{% include head.html %}
-<body>
-{% include header.html %}
-<div class="page-content">
-  <div class="wrapper">
-{{ content }}
-  </div>
-</div>
-{% include footer.html %}
-<script src="{{ '/js/main.js' | relative_url }}"></script>
-</body>
+<!doctype html>
+<html>
+  {% include head.html %}
+  <body>
+    <div class="container">
+      {% include header.html %}
+      <div class="content-wrapper">
+        {{ content }}
+      </div>
+      {% include footer.html %}
+    </div>
+  </body>
 </html>

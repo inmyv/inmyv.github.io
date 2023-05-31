@@ -1,0 +1,115 @@
+---
+layout: page
+title: About
+permalink: /about
+image: cuba-2.jpg
+---
+<p align="center"><strong>前言</strong></p>
+
+    要永远坚信这一点，一切都会变的。
+    无论受多大创伤，心情多么沉重，一贫如洗也好，都要坚持住。
+    太阳落了还会升起，不幸的日子总有尽头，过去是这样，将来也是这样。
+
+### 文本格式
+文本中可以建立一个这样的 <a href="#">链接</a>, 和在文章中插入 *斜体文本*。
+
+两个星符号 **加粗字体** ，效果看起来不错。
+
+### 内置HTML元素
+
+- **字体加粗**, 使用 `<strong>`.
+- *斜体字体*, 使用 `<em>`.
+- 缩写, 例如 <abbr title="HyperText Markup Langage">HTML</abbr> 应该使用 `<abbr>`, 带有可选的 `title` 完整短语的属性。
+- 引证, 例如 <cite>&mdash; Mark otto</cite>, 应该使用 `<cite>`.
+- <del>删除</del> 文本应该使用 `<del>` 和 <ins>插入</ins> 文本应该使用 `<ins>`.
+- <sup>上标文本</sup> 使用 `<sup>` <sub>下标文本</sub> 使用 `<sub>`.
+
+### 脚注
+
+脚注作为标记语法的一部分受到支持。这里有一个正在运行。点击这个数字[^fn-sample_footnote] 将引导您找到一个脚注。语法如下所示：
+
+{% highlight text %}
+点击这个数字[^fn-sample_footnote]
+{% endhighlight %}
+
+每个脚注都需要 `^fn-` 为脚注内容引用的前缀和唯一ID。该列表的语法如下所示：
+
+{% highlight text %}
+[^fn-sample_footnote]: 单击尾部`↩`返回
+{% endhighlight %}
+
+您可以将脚注内容放在任意位置。标记分析器应该正确地将其放置在文章的底部。
+
+## 标题字号
+
+# 标题字号 H1
+
+## 标题字号 H2
+
+### 标题字号 H3
+
+#### 标题字号 H4
+
+##### 标题字号 H5
+
+###### 标题字号 H6
+
+### 代码
+
+内置代码可与 `<code>` 元素一起使用。Pygments支持多行代码的片段。需要时，较长的行将自动水平滚动。
+
+{% highlight js %}
+// Example can be run directly in your JavaScript console
+
+// Create a function that takes two arguments and returns the sum of those arguments
+var adder = new Function("a", "b", "return a + b");
+
+// Call the function
+adder(2, 6);
+// > 8
+{% endhighlight %}
+
+### 列表
+
+以下是无序列表和有序列表的示例
+
+* 先将水煮沸
+* 加入一勺米
+* 搅拌均匀
+* 小火煮半个小时
+* 锅烧干了。
+
+
+
+1.  Web前端简介
+2.  HTML（超文本标记语言）
+3.  CSS（层叠样式表）
+4.  JavaScript（脚本语言）
+5.  JavaScript教程
+
+### 图片
+
+![placeholder](/images/800x400.png "Large example image")
+
+![placeholder](/images/400x200.png "Medium example image")
+
+![placeholder](/images/200x200.png "Small example image")
+
+### 表格
+
+<table>
+  <tr><th>标题字号 1</th><th>标题字号 2</th><th>标题字号 3</th><th>标题字号 4</th><th>标题字号 5</th></tr>
+  <tr><td>行数:1 格子:1</td><td>行数:1 格子:2</td><td>行数:1 格子:3</td><td>行数:1 格子:4</td><td>行数:1 格子:5</td></tr>
+  <tr><td>行数:2 格子:1</td><td>行数:2 格子:2</td><td>行数:2 格子:3</td><td>行数:2 格子:4</td><td>行数:2 格子:5</td></tr>
+  <tr><td>行数:3 格子:1</td><td>行数:3 格子:2</td><td>行数:3 格子:3</td><td>行数:3 格子:4</td><td>行数:3 格子:5</td></tr>
+  <tr><td>行数:4 格子:1</td><td>行数:4 格子:2</td><td>行数:4 格子:3</td><td>行数:4 格子:4</td><td>行数:4 格子:5</td></tr>
+  <tr><td>行数:5 格子:1</td><td>行数:5 格子:2</td><td>行数:5 格子:3</td><td>行数:5 格子:4</td><td>行数:5 格子:5</td></tr>
+  <tr><td>行数:6 格子:1</td><td>行数:6 格子:2</td><td>行数:6 格子:3</td><td>行数:6 格子:4</td><td>行数:6 格子:5</td></tr>
+</table>
+
+### 引用
+> 后天可能做的事也不要拖到明天。 - 马克·吐温
+
+脚注:
+
+[^fn-sample_footnote]: 单击尾部`↩`返回。

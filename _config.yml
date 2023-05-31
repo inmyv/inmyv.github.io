@@ -1,27 +1,19 @@
-# 网站配置 ...
-uri: artlee.cn
-url: https://artlee.cn
-name: Artlee
-title: Artlee.cn
-email: hey@artlee.cn
-author: Artlee
-keywords: "Design, Code, Video"
-description: "记录一些比较重要且容易忘记的东西..."
-social_username: inmyv
+# Site Build Settings
 
-# 生成配置 ...
-sass:
-  style: compressed
-markdown: kramdown
-paginate: 5
-permalink: /:title
-paginate_path: "/page/:num/"
-include:
-  - _pages
-exclude:
-  - README.md
+# jekyll-paginate configuration
+paginate:            5
 
-# 插件 ...
-plugins:
-  - jekyll-paginate
-  - jemoji
+# Build settings
+markdown:            kramdown
+highlighter:         rouge
+permalink:           /:title
+plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
+
+# Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
+title:		           "Artlee"
+description:	       "一切从一个点开始"
+author:              "Lee"
+
+# RSS 2.0 can be used instead of Atom by uncommenting following two lines
+#feed:
+#  path: rss-feed.xml
