@@ -34,6 +34,7 @@ layout: default
 
 ## 联系方式
 企鹅群：5125129 | 微信号：1000yTeam
+<br>
 邮箱地址 : support@1000y.team
 
 </section>
