@@ -23,7 +23,11 @@ layout: default
 <section>
 
 ## 帐号服务
+<div style="margin:0 0 2rem;">
+
   [注册帐号]({{ site.baseurl }}/runewizard/) | [查询密码]({{ site.baseurl }}/runewizard/) | [修改密码]({{ site.baseurl }}/runewizard/) 
+
+</div>
 
 ## 客户端、补丁
   [阿里云盘](http://www.aliyun.com) | [百度网盘](http://pan.baidu.com) | [蓝奏云](http://www.lanzou.com)
