@@ -1,17 +1,27 @@
-# Jekyll Configuration
-#source: 
-#destination: _site
-baseurl: /
+# 网站配置 ...
+uri: artlee.cn
+url: https://artlee.cn
+name: Artlee
+title: Artlee.cn
+email: hey@artlee.cn
+author: Artlee
+keywords: "Design, Code, Video"
+description: "记录一些比较重要且容易忘记的东西..."
+social_username: inmyv
 
-markdown: kramdown
-
-permalink: /:title
-
-exclude:
-- archive
-- code
-- LICENSE
-- README.md
-
+# 生成配置 ...
 sass:
-  sass_dir: css
+  style: compressed
+markdown: kramdown
+paginate: 5
+permalink: /:title
+paginate_path: "/page/:num/"
+include:
+  - _pages
+exclude:
+  - README.md
+
+# 插件 ...
+plugins:
+  - jekyll-paginate
+  - jemoji
