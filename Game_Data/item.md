@@ -1,6 +1,6 @@
 ---
 layout: default
-title: The Valkyrie
+title: 物品介绍
 ---
 
 {::options parse_block_html="true" /}

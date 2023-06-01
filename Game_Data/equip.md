@@ -1,6 +1,6 @@
 ---
 layout: default
-title: The Valkyrie
+title: 装备介绍
 ---
 
 {::options parse_block_html="true" /}

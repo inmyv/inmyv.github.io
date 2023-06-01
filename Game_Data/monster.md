@@ -1,18 +1,7 @@
 ---
 layout: default
-title: Super Unique Monsters
+title: 怪物介绍
 ---
-
-## Super Unique Monsters
-
-The following table lists levels & <span style="color:#4c4">treasure classes</span> for Super Unique monsters. Read more about [item generation](http://diablo2.diablowiki.net/Item_Generation_Tutorial) and [Treasure Classes](http://diablo.gamepedia.com/Treasure_Classes_(Diablo_II)).
-
-Since patch <em class="v">1.10</em> the level of Super Uniques, Uniques and their minions in Nightmare and Hell difficulties is based on the area level (area level + 3).
-
-TC's A, B & C are indicated as an estimate of the quality of the items that can be dropped. Treasure Class C is the higher quality drops. Also note that the Treasure Classes A,B and C are specific to each Act. Treasure Class A in Act 2 is better than the Treasure Class A in Act I.
-
-Note the Treasure Class 'Cx' for Pindleskin and ThreshSocket, which indicates that they have been nerfed in <em class="v">1.10</em>.
-
 
 <table class="tr-Table" id= "tsu">
 <colgroup>
